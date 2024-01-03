@@ -1,9 +1,0 @@
-protectFromDetectionUpdates=false
-label=J-Link Silicon Labs (440145895)
-targetPartOverride=mcu.arm.efr32.bg12.efr32bg12p132f1024gl125
-boardOverrides {
-  com.silabs.board.none:0.0.0
-}
-EXTENSION:com.silabs.ss.support.mcu.internal.api.part.core.MCUDeviceSettingExtension {
-  tifId:swd
-}
