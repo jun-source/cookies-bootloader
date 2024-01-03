@@ -22,11 +22,7 @@ It is recommended to run this example first. It will solve most of the USART com
 
 3. You need to match USART pin definition in the project with the pinout of the target device. The configuration is done at *iostream_usart_baremetal/config/sl_iostream_usart_vcom_config.h*. In the case of Cookies, USART0 will be used for the communication between the host and the target device. RTS and CTS are disabled. You can find more information on EFR32BG12's datasheet and Cookie's schematic.
 
-
-
-   ![Screenshot from 2024-01-02 18-26-27](/home/jun/Pictures/Screenshots/Screenshot from 2024-01-02 18-26-27.png)
-
-
+![Screenshot from 2024-01-02 18-26-27](https://github.com/jun-source/cookies-bootloader/assets/122213795/be9dd609-6180-4827-9d65-bb5260a6426b)
 
 4. Compile the project and click on Run for downloading the FW image to the target device.
 
@@ -48,13 +44,13 @@ The next step will be loading one of the bootloader examples provided by the man
 
  3. Match USART0 pinout definition in the source code with target device's pinout by modifying *bootloader-uart-bgapi/config/btl_uart_driver_cfg.h*.
 
-    ![Screenshot from 2024-01-02 18-29-54](/home/jun/Pictures/Screenshots/Screenshot from 2024-01-02 18-29-54.png)
+    ![Screenshot from 2024-01-02 18-29-54](https://github.com/jun-source/cookies-bootloader/assets/122213795/4eb0a5e4-20ac-4b2e-9401-4d3ee332724f)
 
- 4. Generate the bootloader image by compiling the project. On Series 1 devices, three bootloader images are generated into the build directory: a main bootloader, a main bootloader with CRC32 checksum, and a combined first stage and main bootloader with CRC32 checksum. The main bootloader image is called <project-name>.s37, the main bootloader with CRC32 checksum is called <projectname> crc.s37, while the combined first stage image + main bootloader image with a CRC32 checksum is called <projectname>-combined.s37. The first time a device is programmed, whether during development or manufacturing, the combined image needs to be programmed. For subsequent programming, when a first stage bootloader is already present on the device, it is okay to download an image containing just the main bootloader. In this case, the main bootloader with CRC32 should be used. Assuming it is the first time the target device is loaded with a bootloader, we will use <projectname>-combined.s37.
+ 5. Generate the bootloader image by compiling the project. On Series 1 devices, three bootloader images are generated into the build directory: a main bootloader, a main bootloader with CRC32 checksum, and a combined first stage and main bootloader with CRC32 checksum. The main bootloader image is called <project-name>.s37, the main bootloader with CRC32 checksum is called <projectname> crc.s37, while the combined first stage image + main bootloader image with a CRC32 checksum is called <projectname>-combined.s37. The first time a device is programmed, whether during development or manufacturing, the combined image needs to be programmed. For subsequent programming, when a first stage bootloader is already present on the device, it is okay to download an image containing just the main bootloader. In this case, the main bootloader with CRC32 should be used. Assuming it is the first time the target device is loaded with a bootloader, we will use <projectname>-combined.s37.
+    
+    ![Screenshot from 2024-01-02 18-38-26](https://github.com/jun-source/cookies-bootloader/assets/122213795/52ef2006-eeca-42e8-8954-be6ae33eab58)
 
-    ![Screenshot from 2024-01-02 18-38-26](/home/jun/Pictures/Screenshots/Screenshot from 2024-01-02 18-38-26.png)
-
- 5. The last step is load the bootloader through CLI commands using Simplicity Commander:
+ 7. The last step is load the bootloader through CLI commands using Simplicity Commander:
 
     ```
     ./home/$USER/SimplicityStudio_v5/developer/adapter_packs/commander/commander flash -d  EFR32BG12P132F1024GL125 images/bootloader-uart-bgapi-combined.s37
@@ -68,18 +64,18 @@ The next step will be loading one of the bootloader examples provided by the man
 
    2. Create a FW image based again on *iostream_usart_baremetal example* but adding the App Properties bootloader component. This component is needed to generate the GBL file using the commander utility. It seems like there is a bug described at https://community.silabs.com/s/question/0D58Y00008ZZjOASA1/app-properties-not-working-in-gsdk-402?language=en_US. You will also need to solve the compilation error logs.
 
-      ![](/home/jun/Pictures/Screenshots/Screenshot from 2024-01-02 19-24-25.png)
+      ![Screenshot from 2024-01-02 19-24-25](https://github.com/jun-source/cookies-bootloader/assets/122213795/9c4711ad-78ca-4079-b7d3-5a28063c3dec)
 
-   3. The next step will be creating the GBL files. You can either execute the correspondent CLI command on your own or you can use the script provided by the manufacturer *create_bl_files.sh*. In this example, we will use the script. You need to set up two environmental variables and move the FW upgrade image to the same directory as the script.
+   5. The next step will be creating the GBL files. You can either execute the correspondent CLI command on your own or you can use the script provided by the manufacturer *create_bl_files.sh*. In this example, we will use the script. You need to set up two environmental variables and move the FW upgrade image to the same directory as the script.
 
       `export PATH_SCMD=/home/$USER/SimplicityStudio_v5/developer/adapter_packs/commander`
       `export PATH_GCCARM=/home/$USER/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10`
 
-   4. Running the *create_bl_files script.sh* creates multiple GBL files in a subfolder named output_gbl. The file named full.gbl is the upgrade image used for UART DFU. The other files are related to OTA upgrades and they can be ignored. If signing and/or encryption keys (named app-sign-key.pem, app-encrypt-key.txt) are present in the same directory, then the script
+   6. Running the *create_bl_files script.sh* creates multiple GBL files in a subfolder named output_gbl. The file named full.gbl is the upgrade image used for UART DFU. The other files are related to OTA upgrades and they can be ignored. If signing and/or encryption keys (named app-sign-key.pem, app-encrypt-key.txt) are present in the same directory, then the script
       also creates secure variants of the GBL files.
 
-   5. Compile */home/$USER/SimplicityStudio/SDKs/gecko_sdk/app/bluetooth/example_host/bt_host_uart_dfu*.
+   7. Compile */home/$USER/SimplicityStudio/SDKs/gecko_sdk/app/bluetooth/example_host/bt_host_uart_dfu*.
 
-   6. Execute *bt_host_uart_dfu* to load full.gbl.
+   8. Execute *bt_host_uart_dfu* to load full.gbl.
 
       `./bt_host_uart_dfu -u /dev/ttyUSB0 -b 115200 -f -l 4 output_gbl/full.gbl`
