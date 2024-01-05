@@ -2134,7 +2134,7 @@ END GROUP
 LOAD /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtend.o
 LOAD /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtn.o
 
-.text           0x000000000fe10800     0x2cf0
+.text           0x000000000fe10800     0x2cb0
                 0x000000000fe10800                linker_vectors_begin = .
  *(.vectors)
  .vectors       0x000000000fe10800      0x10c ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG12P/Source/startup_efr32bg12p.o
@@ -2167,364 +2167,364 @@ LOAD /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin
                 0x000000000fe10a9c       0x48 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
                 0x000000000fe10a9c                bootload_checkApplicationPropertiesMagic
  .text.bootload_verifyApplication
-                0x000000000fe10ae4       0xe8 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
+                0x000000000fe10ae4       0xa8 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
                 0x000000000fe10ae4                bootload_verifyApplication
  .text.bootload_commitBootloaderUpgrade
-                0x000000000fe10bcc       0x20 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
-                0x000000000fe10bcc                bootload_commitBootloaderUpgrade
+                0x000000000fe10b8c       0x20 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
+                0x000000000fe10b8c                bootload_commitBootloaderUpgrade
  .text.bootload_getBootloaderVersion
-                0x000000000fe10bec       0x10 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
-                0x000000000fe10bec                bootload_getBootloaderVersion
+                0x000000000fe10bac       0x10 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
+                0x000000000fe10bac                bootload_getBootloaderVersion
  .text.startup.main
-                0x000000000fe10bfc       0xc0 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
-                0x000000000fe10bfc                main
+                0x000000000fe10bbc       0xc0 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
+                0x000000000fe10bbc                main
  .text.SystemInit2
-                0x000000000fe10cbc       0x88 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
-                0x000000000fe10cbc                SystemInit2
+                0x000000000fe10c7c       0x88 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
+                0x000000000fe10c7c                SystemInit2
  .text.reset_invalidateResetReason
-                0x000000000fe10d44       0x10 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
-                0x000000000fe10d44                reset_invalidateResetReason
+                0x000000000fe10d04       0x10 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
+                0x000000000fe10d04                reset_invalidateResetReason
  .text.reset_resetCounterEnabled
-                0x000000000fe10d54       0x1c ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
-                0x000000000fe10d54                reset_resetCounterEnabled
+                0x000000000fe10d14       0x1c ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
+                0x000000000fe10d14                reset_resetCounterEnabled
  .text.reset_setResetReason
-                0x000000000fe10d70       0x18 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
-                0x000000000fe10d70                reset_setResetReason
+                0x000000000fe10d30       0x18 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
+                0x000000000fe10d30                reset_setResetReason
  .text.reset_resetWithReason
-                0x000000000fe10d88       0x3c ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
-                0x000000000fe10d88                reset_resetWithReason
+                0x000000000fe10d48       0x3c ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
+                0x000000000fe10d48                reset_resetWithReason
  .text.reset_classifyReset
-                0x000000000fe10dc4       0x2c ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
-                0x000000000fe10dc4                reset_classifyReset
+                0x000000000fe10d84       0x2c ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
+                0x000000000fe10d84                reset_classifyReset
  .text.reset_getResetReason
-                0x000000000fe10df0        0xc ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
-                0x000000000fe10df0                reset_getResetReason
+                0x000000000fe10db0        0xc ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
+                0x000000000fe10db0                reset_getResetReason
  .text.delay_init
-                0x000000000fe10dfc       0x58 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_delay.o
-                0x000000000fe10dfc                delay_init
+                0x000000000fe10dbc       0x58 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_delay.o
+                0x000000000fe10dbc                delay_init
  .text.delay_milliseconds
-                0x000000000fe10e54       0x48 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_delay.o
-                0x000000000fe10e54                delay_milliseconds
+                0x000000000fe10e14       0x48 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_delay.o
+                0x000000000fe10e14                delay_milliseconds
  .text.delay_expired
-                0x000000000fe10e9c       0x34 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_delay.o
-                0x000000000fe10e9c                delay_expired
+                0x000000000fe10e5c       0x34 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_delay.o
+                0x000000000fe10e5c                delay_expired
  .text.uart_init
-                0x000000000fe10ed0      0x10c ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
-                0x000000000fe10ed0                uart_init
+                0x000000000fe10e90      0x10c ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
+                0x000000000fe10e90                uart_init
  .text.uart_isTxIdle
-                0x000000000fe10fdc       0x2c ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
-                0x000000000fe10fdc                uart_isTxIdle
+                0x000000000fe10f9c       0x2c ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
+                0x000000000fe10f9c                uart_isTxIdle
  .text.uart_sendBuffer
-                0x000000000fe11008       0x70 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
-                0x000000000fe11008                uart_sendBuffer
+                0x000000000fe10fc8       0x70 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
+                0x000000000fe10fc8                uart_sendBuffer
  .text.uart_getRxAvailableBytes
-                0x000000000fe11078       0x48 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
-                0x000000000fe11078                uart_getRxAvailableBytes
+                0x000000000fe11038       0x48 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
+                0x000000000fe11038                uart_getRxAvailableBytes
  .text.uart_receiveBuffer
-                0x000000000fe110c0       0xa4 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
-                0x000000000fe110c0                uart_receiveBuffer
+                0x000000000fe11080       0xa4 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
+                0x000000000fe11080                uart_receiveBuffer
  .text.util_getClockFreq
-                0x000000000fe11164       0x88 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_util.o
-                0x000000000fe11164                util_getClockFreq
+                0x000000000fe11124       0x88 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_util.o
+                0x000000000fe11124                util_getClockFreq
  .text.gbl_getTagParsingInfoFromTagId
-                0x000000000fe111ec       0x24 ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_format.o
-                0x000000000fe111ec                gbl_getTagParsingInfoFromTagId
+                0x000000000fe111ac       0x24 ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_format.o
+                0x000000000fe111ac                gbl_getTagParsingInfoFromTagId
  .text.gbl_parseHeader
-                0x000000000fe11210       0x7c ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
+                0x000000000fe111d0       0x7c ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
  .text.gbl_writeProgData
-                0x000000000fe1128c       0xac ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
-                0x000000000fe1128c                gbl_writeProgData
+                0x000000000fe1124c       0xac ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
+                0x000000000fe1124c                gbl_writeProgData
  .text.parser_parse
-                0x000000000fe11338      0x5ac ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
-                0x000000000fe11338                parser_parse
+                0x000000000fe112f8      0x5ac ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
+                0x000000000fe112f8                parser_parse
  .text.btl_crc32Stream
-                0x000000000fe118e4       0x34 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_crc32.o
-                0x000000000fe118e4                btl_crc32Stream
+                0x000000000fe118a4       0x34 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_crc32.o
+                0x000000000fe118a4                btl_crc32Stream
  .text.btl_verifyEcdsaP256r1
-                0x000000000fe11918       0x80 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_ecdsa.o
-                0x000000000fe11918                btl_verifyEcdsaP256r1
+                0x000000000fe118d8       0x80 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_ecdsa.o
+                0x000000000fe118d8                btl_verifyEcdsaP256r1
  .text.btl_getSignedBootloaderKeyXPtr
-                0x000000000fe11998        0x8 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_tokens.o
-                0x000000000fe11998                btl_getSignedBootloaderKeyXPtr
+                0x000000000fe11958        0x8 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_tokens.o
+                0x000000000fe11958                btl_getSignedBootloaderKeyXPtr
  .text.btl_getSignedBootloaderKeyYPtr
-                0x000000000fe119a0        0x8 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_tokens.o
-                0x000000000fe119a0                btl_getSignedBootloaderKeyYPtr
+                0x000000000fe11960        0x8 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_tokens.o
+                0x000000000fe11960                btl_getSignedBootloaderKeyYPtr
  .text.btl_getImageFileEncryptionKeyPtr
-                0x000000000fe119a8        0x8 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_tokens.o
-                0x000000000fe119a8                btl_getImageFileEncryptionKeyPtr
+                0x000000000fe11968        0x8 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_tokens.o
+                0x000000000fe11968                btl_getImageFileEncryptionKeyPtr
  .text.ECC_ModularInversePrime
-                0x000000000fe119b0       0x90 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
+                0x000000000fe11970       0x90 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
  .text.ECC_AddPrimeMixedProjectiveAffine
-                0x000000000fe11a40      0x188 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
+                0x000000000fe11a00      0x188 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
  .text.ECC_ProjectiveToAffine
-                0x000000000fe11bc8       0xac ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
+                0x000000000fe11b88       0xac ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
  .text.ECC_PointMul
-                0x000000000fe11c74      0x2a0 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
+                0x000000000fe11c34      0x2a0 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
  .text.ECC_ECDSA_VerifySignatureP256
-                0x000000000fe11f14      0x284 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
-                0x000000000fe11f14                ECC_ECDSA_VerifySignatureP256
+                0x000000000fe11ed4      0x284 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
+                0x000000000fe11ed4                ECC_ECDSA_VerifySignatureP256
  .text.sha_x_update.part.0
-                0x000000000fe12198       0xa8 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
+                0x000000000fe12158       0xa8 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
  .text.sha_x_update
-                0x000000000fe12240       0x28 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
-                0x000000000fe12240                sha_x_update
+                0x000000000fe12200       0x28 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
+                0x000000000fe12200                sha_x_update
  .text.sha_x_finish.part.0
-                0x000000000fe12268       0x98 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
+                0x000000000fe12228       0x98 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
  .text.sha_x_process
-                0x000000000fe12300      0x124 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/crypto_sha.o
-                0x000000000fe12300                sha_x_process
- .text.syncReg  0x000000000fe12424       0x18 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x000000000fe122c0      0x124 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/crypto_sha.o
+                0x000000000fe122c0                sha_x_process
+ .text.syncReg  0x000000000fe123e4       0x18 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
  .text.CMU_ClockEnable
-                0x000000000fe1243c       0x80 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
-                0x000000000fe1243c                CMU_ClockEnable
+                0x000000000fe123fc       0x80 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+                0x000000000fe123fc                CMU_ClockEnable
  .text.GPIO_PinModeSet
-                0x000000000fe124bc       0x78 ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
-                0x000000000fe124bc                GPIO_PinModeSet
+                0x000000000fe1247c       0x78 ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
+                0x000000000fe1247c                GPIO_PinModeSet
  .text.MSC_ErasePage
-                0x000000000fe12534       0x9c ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
-                0x000000000fe12534                MSC_ErasePage
+                0x000000000fe124f4       0x9c ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
+                0x000000000fe124f4                MSC_ErasePage
  .text.MSC_WriteWordDma
-                0x000000000fe125d0       0xec ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
-                0x000000000fe125d0                MSC_WriteWordDma
+                0x000000000fe12590       0xec ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
+                0x000000000fe12590                MSC_WriteWordDma
  .text.SYSTEM_GetProdRev
-                0x000000000fe126bc       0x10 ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
-                0x000000000fe126bc                SYSTEM_GetProdRev
+                0x000000000fe1267c       0x10 ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
+                0x000000000fe1267c                SYSTEM_GetProdRev
  .text.crypto_management_acquire
-                0x000000000fe126cc       0x14 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
-                0x000000000fe126cc                crypto_management_acquire
+                0x000000000fe1268c       0x14 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
+                0x000000000fe1268c                crypto_management_acquire
  .text.crypto_management_release
-                0x000000000fe126e0       0x34 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
-                0x000000000fe126e0                crypto_management_release
+                0x000000000fe126a0       0x34 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
+                0x000000000fe126a0                crypto_management_release
  .text.Default_Handler
-                0x000000000fe12714        0x2 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG12P/Source/startup_efr32bg12p.o
-                0x000000000fe12714                DebugMon_Handler
-                0x000000000fe12714                USART0_TX_IRQHandler
-                0x000000000fe12714                I2C0_IRQHandler
-                0x000000000fe12714                SysTick_Handler
-                0x000000000fe12714                USART1_RX_IRQHandler
-                0x000000000fe12714                PendSV_Handler
-                0x000000000fe12714                NMI_Handler
-                0x000000000fe12714                SYNTH_IRQHandler
-                0x000000000fe12714                I2C1_IRQHandler
-                0x000000000fe12714                WTIMER0_IRQHandler
-                0x000000000fe12714                CRYPTO0_IRQHandler
-                0x000000000fe12714                WDOG0_IRQHandler
-                0x000000000fe12714                USART1_TX_IRQHandler
-                0x000000000fe12714                SMU_IRQHandler
-                0x000000000fe12714                MSC_IRQHandler
-                0x000000000fe12714                ADC0_IRQHandler
-                0x000000000fe12714                UsageFault_Handler
-                0x000000000fe12714                WDOG1_IRQHandler
-                0x000000000fe12714                LEUART0_IRQHandler
-                0x000000000fe12714                FPUEH_IRQHandler
-                0x000000000fe12714                WTIMER1_IRQHandler
-                0x000000000fe12714                GPIO_EVEN_IRQHandler
-                0x000000000fe12714                VDAC0_IRQHandler
-                0x000000000fe12714                LDMA_IRQHandler
-                0x000000000fe12714                CSEN_IRQHandler
-                0x000000000fe12714                CRYPTO1_IRQHandler
-                0x000000000fe12714                TIMER0_IRQHandler
-                0x000000000fe12714                PCNT2_IRQHandler
-                0x000000000fe12714                LETIMER0_IRQHandler
-                0x000000000fe12714                TIMER1_IRQHandler
-                0x000000000fe12714                TRNG0_IRQHandler
-                0x000000000fe12714                RFSENSE_IRQHandler
-                0x000000000fe12714                BUFC_IRQHandler
-                0x000000000fe12714                MODEM_IRQHandler
-                0x000000000fe12714                USART2_RX_IRQHandler
-                0x000000000fe12714                Default_Handler
-                0x000000000fe12714                RAC_SEQ_IRQHandler
-                0x000000000fe12714                FRC_PRI_IRQHandler
-                0x000000000fe12714                EMU_IRQHandler
-                0x000000000fe12714                FRC_IRQHandler
-                0x000000000fe12714                CRYOTIMER_IRQHandler
-                0x000000000fe12714                PCNT0_IRQHandler
-                0x000000000fe12714                AGC_IRQHandler
-                0x000000000fe12714                PCNT1_IRQHandler
-                0x000000000fe12714                ACMP0_IRQHandler
-                0x000000000fe12714                USART0_RX_IRQHandler
-                0x000000000fe12714                MemManage_Handler
-                0x000000000fe12714                SVC_Handler
-                0x000000000fe12714                USART3_RX_IRQHandler
-                0x000000000fe12714                RTCC_IRQHandler
-                0x000000000fe12714                CMU_IRQHandler
-                0x000000000fe12714                RAC_RSM_IRQHandler
-                0x000000000fe12714                GPIO_ODD_IRQHandler
-                0x000000000fe12714                LESENSE_IRQHandler
-                0x000000000fe12714                USART3_TX_IRQHandler
-                0x000000000fe12714                PROTIMER_IRQHandler
-                0x000000000fe12714                BusFault_Handler
-                0x000000000fe12714                USART2_TX_IRQHandler
-                0x000000000fe12714                IDAC0_IRQHandler
+                0x000000000fe126d4        0x2 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG12P/Source/startup_efr32bg12p.o
+                0x000000000fe126d4                DebugMon_Handler
+                0x000000000fe126d4                USART0_TX_IRQHandler
+                0x000000000fe126d4                I2C0_IRQHandler
+                0x000000000fe126d4                SysTick_Handler
+                0x000000000fe126d4                USART1_RX_IRQHandler
+                0x000000000fe126d4                PendSV_Handler
+                0x000000000fe126d4                NMI_Handler
+                0x000000000fe126d4                SYNTH_IRQHandler
+                0x000000000fe126d4                I2C1_IRQHandler
+                0x000000000fe126d4                WTIMER0_IRQHandler
+                0x000000000fe126d4                CRYPTO0_IRQHandler
+                0x000000000fe126d4                WDOG0_IRQHandler
+                0x000000000fe126d4                USART1_TX_IRQHandler
+                0x000000000fe126d4                SMU_IRQHandler
+                0x000000000fe126d4                MSC_IRQHandler
+                0x000000000fe126d4                ADC0_IRQHandler
+                0x000000000fe126d4                UsageFault_Handler
+                0x000000000fe126d4                WDOG1_IRQHandler
+                0x000000000fe126d4                LEUART0_IRQHandler
+                0x000000000fe126d4                FPUEH_IRQHandler
+                0x000000000fe126d4                WTIMER1_IRQHandler
+                0x000000000fe126d4                GPIO_EVEN_IRQHandler
+                0x000000000fe126d4                VDAC0_IRQHandler
+                0x000000000fe126d4                LDMA_IRQHandler
+                0x000000000fe126d4                CSEN_IRQHandler
+                0x000000000fe126d4                CRYPTO1_IRQHandler
+                0x000000000fe126d4                TIMER0_IRQHandler
+                0x000000000fe126d4                PCNT2_IRQHandler
+                0x000000000fe126d4                LETIMER0_IRQHandler
+                0x000000000fe126d4                TIMER1_IRQHandler
+                0x000000000fe126d4                TRNG0_IRQHandler
+                0x000000000fe126d4                RFSENSE_IRQHandler
+                0x000000000fe126d4                BUFC_IRQHandler
+                0x000000000fe126d4                MODEM_IRQHandler
+                0x000000000fe126d4                USART2_RX_IRQHandler
+                0x000000000fe126d4                Default_Handler
+                0x000000000fe126d4                RAC_SEQ_IRQHandler
+                0x000000000fe126d4                FRC_PRI_IRQHandler
+                0x000000000fe126d4                EMU_IRQHandler
+                0x000000000fe126d4                FRC_IRQHandler
+                0x000000000fe126d4                CRYOTIMER_IRQHandler
+                0x000000000fe126d4                PCNT0_IRQHandler
+                0x000000000fe126d4                AGC_IRQHandler
+                0x000000000fe126d4                PCNT1_IRQHandler
+                0x000000000fe126d4                ACMP0_IRQHandler
+                0x000000000fe126d4                USART0_RX_IRQHandler
+                0x000000000fe126d4                MemManage_Handler
+                0x000000000fe126d4                SVC_Handler
+                0x000000000fe126d4                USART3_RX_IRQHandler
+                0x000000000fe126d4                RTCC_IRQHandler
+                0x000000000fe126d4                CMU_IRQHandler
+                0x000000000fe126d4                RAC_RSM_IRQHandler
+                0x000000000fe126d4                GPIO_ODD_IRQHandler
+                0x000000000fe126d4                LESENSE_IRQHandler
+                0x000000000fe126d4                USART3_TX_IRQHandler
+                0x000000000fe126d4                PROTIMER_IRQHandler
+                0x000000000fe126d4                BusFault_Handler
+                0x000000000fe126d4                USART2_TX_IRQHandler
+                0x000000000fe126d4                IDAC0_IRQHandler
  .text.Reset_Handler
-                0x000000000fe12716       0x16 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG12P/Source/startup_efr32bg12p.o
-                0x000000000fe12716                Reset_Handler
+                0x000000000fe126d6       0x16 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG12P/Source/startup_efr32bg12p.o
+                0x000000000fe126d6                Reset_Handler
  .text.communication_init
-                0x000000000fe1272c        0x4 ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi.o
-                0x000000000fe1272c                communication_init
+                0x000000000fe126ec        0x4 ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi.o
+                0x000000000fe126ec                communication_init
  .text.communication_start
-                0x000000000fe12730        0x4 ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi.o
-                0x000000000fe12730                communication_start
+                0x000000000fe126f0        0x4 ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi.o
+                0x000000000fe126f0                communication_start
  .text.communication_shutdown
-                0x000000000fe12734        0x2 ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi.o
-                0x000000000fe12734                communication_shutdown
+                0x000000000fe126f4        0x2 ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi.o
+                0x000000000fe126f4                communication_shutdown
  .text.sendPacket
-                0x000000000fe12736        0xc ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi_common.o
+                0x000000000fe126f6        0xc ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi_common.o
  .text.bootloader_bgapi_communication_init
-                0x000000000fe12742        0x4 ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi_common.o
-                0x000000000fe12742                bootloader_bgapi_communication_init
+                0x000000000fe12702        0x4 ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi_common.o
+                0x000000000fe12702                bootloader_bgapi_communication_init
  .text.bootloader_bgapi_communication_start
-                0x000000000fe12746       0x6a ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi_common.o
-                0x000000000fe12746                bootloader_bgapi_communication_start
+                0x000000000fe12706       0x6a ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi_common.o
+                0x000000000fe12706                bootloader_bgapi_communication_start
  .text.bootloader_bgapi_communication_main
-                0x000000000fe127b0      0x160 ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi_common.o
-                0x000000000fe127b0                bootloader_bgapi_communication_main
+                0x000000000fe12770      0x160 ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi_common.o
+                0x000000000fe12770                bootloader_bgapi_communication_main
  .text.flashData
-                0x000000000fe12910       0x44 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
+                0x000000000fe128d0       0x44 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
  .text.bootload_checkApplicationPropertiesVersion
-                0x000000000fe12954        0xe ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
-                0x000000000fe12954                bootload_checkApplicationPropertiesVersion
+                0x000000000fe12914        0xe ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
+                0x000000000fe12914                bootload_checkApplicationPropertiesVersion
  .text.bootload_getUpgradeLocation
-                0x000000000fe12962        0x6 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
-                0x000000000fe12962                bootload_getUpgradeLocation
+                0x000000000fe12922        0x6 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
+                0x000000000fe12922                bootload_getUpgradeLocation
  .text.btl_init
-                0x000000000fe12968        0x4 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_core.o
-                0x000000000fe12968                btl_init
+                0x000000000fe12928        0x4 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_core.o
+                0x000000000fe12928                btl_init
  .text.btl_deinit
-                0x000000000fe1296c        0x4 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_core.o
-                0x000000000fe1296c                btl_deinit
+                0x000000000fe1292c        0x4 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_core.o
+                0x000000000fe1292c                btl_deinit
  .text.bootToApp
-                0x000000000fe12970       0x14 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
+                0x000000000fe12930       0x14 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
  .text.HardFault_Handler
-                0x000000000fe12984        0x8 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
-                0x000000000fe12984                HardFault_Handler
+                0x000000000fe12944        0x8 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
+                0x000000000fe12944                HardFault_Handler
  .text.core_initParser
-                0x000000000fe1298c       0x30 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_parse.o
-                0x000000000fe1298c                core_initParser
+                0x000000000fe1294c       0x30 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_parse.o
+                0x000000000fe1294c                core_initParser
  .text.core_parseBuffer
-                0x000000000fe129bc       0x3a ./gecko_sdk_4.3.2/platform/bootloader/core/btl_parse.o
-                0x000000000fe129bc                core_parseBuffer
+                0x000000000fe1297c       0x3a ./gecko_sdk_4.3.2/platform/bootloader/core/btl_parse.o
+                0x000000000fe1297c                core_parseBuffer
  .text.core_parseImageInfo
-                0x000000000fe129f6       0x76 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_parse.o
-                0x000000000fe129f6                core_parseImageInfo
+                0x000000000fe129b6       0x76 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_parse.o
+                0x000000000fe129b6                core_parseImageInfo
  .text.core_parserContextSize
-                0x000000000fe12a6c        0x6 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_parse.o
-                0x000000000fe12a6c                core_parserContextSize
+                0x000000000fe12a2c        0x6 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_parse.o
+                0x000000000fe12a2c                core_parserContextSize
  .text.writeHalfwordDMA
-                0x000000000fe12a72       0x30 ./gecko_sdk_4.3.2/platform/bootloader/core/flash/btl_internal_flash.o
+                0x000000000fe12a32       0x30 ./gecko_sdk_4.3.2/platform/bootloader/core/flash/btl_internal_flash.o
  .text.flash_erasePage
-                0x000000000fe12aa2        0xe ./gecko_sdk_4.3.2/platform/bootloader/core/flash/btl_internal_flash.o
-                0x000000000fe12aa2                flash_erasePage
+                0x000000000fe12a62        0xe ./gecko_sdk_4.3.2/platform/bootloader/core/flash/btl_internal_flash.o
+                0x000000000fe12a62                flash_erasePage
  .text.flash_writeBuffer_dma
-                0x000000000fe12ab0       0x86 ./gecko_sdk_4.3.2/platform/bootloader/core/flash/btl_internal_flash.o
-                0x000000000fe12ab0                flash_writeBuffer_dma
+                0x000000000fe12a70       0x86 ./gecko_sdk_4.3.2/platform/bootloader/core/flash/btl_internal_flash.o
+                0x000000000fe12a70                flash_writeBuffer_dma
  .text.gbl_storeData
-                0x000000000fe12b36       0x42 ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
+                0x000000000fe12af6       0x42 ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
  .text.gbl_getData
-                0x000000000fe12b78      0x102 ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
+                0x000000000fe12b38      0x102 ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
  .text.parser_init
-                0x000000000fe12c7a       0x58 ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
-                0x000000000fe12c7a                parser_init
+                0x000000000fe12c3a       0x58 ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
+                0x000000000fe12c3a                parser_init
  .text.btl_initAesCcm
-                0x000000000fe12cd2       0x40 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_aes.o
-                0x000000000fe12cd2                btl_initAesCcm
+                0x000000000fe12c92       0x40 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_aes.o
+                0x000000000fe12c92                btl_initAesCcm
  .text.btl_processAesCtrData
-                0x000000000fe12d12       0x22 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_aes.o
-                0x000000000fe12d12                btl_processAesCtrData
+                0x000000000fe12cd2       0x22 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_aes.o
+                0x000000000fe12cd2                btl_processAesCtrData
  .text.btl_initSha256
-                0x000000000fe12d34       0x14 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_sha256.o
-                0x000000000fe12d34                btl_initSha256
+                0x000000000fe12cf4       0x14 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_sha256.o
+                0x000000000fe12cf4                btl_initSha256
  .text.btl_updateSha256
-                0x000000000fe12d48        0x4 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_sha256.o
-                0x000000000fe12d48                btl_updateSha256
+                0x000000000fe12d08        0x4 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_sha256.o
+                0x000000000fe12d08                btl_updateSha256
  .text.btl_finalizeSha256
-                0x000000000fe12d4c        0x6 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_sha256.o
-                0x000000000fe12d4c                btl_finalizeSha256
+                0x000000000fe12d0c        0x6 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_sha256.o
+                0x000000000fe12d0c                btl_finalizeSha256
  .text.bigIntEqual32bitVal.constprop.0
-                0x000000000fe12d52       0x20 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
+                0x000000000fe12d12       0x20 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
  .text.ECC_ByteArrayToBigInt
-                0x000000000fe12d72       0x22 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
-                0x000000000fe12d72                ECC_ByteArrayToBigInt
+                0x000000000fe12d32       0x22 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
+                0x000000000fe12d32                ECC_ByteArrayToBigInt
  .text.btl_sha256_init
-                0x000000000fe12d94        0x8 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
-                0x000000000fe12d94                btl_sha256_init
+                0x000000000fe12d54        0x8 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
+                0x000000000fe12d54                btl_sha256_init
  .text.btl_sha256_starts_ret
-                0x000000000fe12d9c        0xa ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
-                0x000000000fe12d9c                btl_sha256_starts_ret
+                0x000000000fe12d5c        0xa ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
+                0x000000000fe12d5c                btl_sha256_starts_ret
  .text.btl_sha256_update_ret
-                0x000000000fe12da6       0x1a ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
-                0x000000000fe12da6                btl_sha256_update_ret
+                0x000000000fe12d66       0x1a ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
+                0x000000000fe12d66                btl_sha256_update_ret
  .text.btl_sha256_finish_ret
-                0x000000000fe12dc0        0xe ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
-                0x000000000fe12dc0                btl_sha256_finish_ret
+                0x000000000fe12d80        0xe ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
+                0x000000000fe12d80                btl_sha256_finish_ret
  .text.CORE_EnterCritical
-                0x000000000fe12dce        0x8 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
-                0x000000000fe12dce                CORE_EnterCritical
+                0x000000000fe12d8e        0x8 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
+                0x000000000fe12d8e                CORE_EnterCritical
  .text.CORE_ExitCritical
-                0x000000000fe12dd6        0x6 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
-                0x000000000fe12dd6                CORE_ExitCritical
+                0x000000000fe12d96        0x6 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
+                0x000000000fe12d96                CORE_ExitCritical
  .text.cryptoBurstToCryptoAndZeroize
-                0x000000000fe12ddc       0x30 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+                0x000000000fe12d9c       0x30 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
  .text.CRYPTO_BurstToCrypto
-                0x000000000fe12e0c       0x14 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
-                0x000000000fe12e0c                CRYPTO_BurstToCrypto
+                0x000000000fe12dcc       0x14 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+                0x000000000fe12dcc                CRYPTO_BurstToCrypto
  .text.CRYPTO_BurstFromCrypto
-                0x000000000fe12e20       0x14 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
-                0x000000000fe12e20                CRYPTO_BurstFromCrypto
+                0x000000000fe12de0       0x14 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+                0x000000000fe12de0                CRYPTO_BurstFromCrypto
  .text.CRYPTO_DataWriteUnaligned
-                0x000000000fe12e34       0x3a ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
-                0x000000000fe12e34                CRYPTO_DataWriteUnaligned
+                0x000000000fe12df4       0x3a ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+                0x000000000fe12df4                CRYPTO_DataWriteUnaligned
  .text.CRYPTO_DataReadUnaligned
-                0x000000000fe12e6e       0x3a ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
-                0x000000000fe12e6e                CRYPTO_DataReadUnaligned
+                0x000000000fe12e2e       0x3a ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+                0x000000000fe12e2e                CRYPTO_DataReadUnaligned
  .text.CRYPTO_DDataWrite
-                0x000000000fe12ea8       0x10 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
-                0x000000000fe12ea8                CRYPTO_DDataWrite
+                0x000000000fe12e68       0x10 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+                0x000000000fe12e68                CRYPTO_DDataWrite
  .text.CRYPTO_DDataRead
-                0x000000000fe12eb8       0x10 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
-                0x000000000fe12eb8                CRYPTO_DDataRead
+                0x000000000fe12e78       0x10 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+                0x000000000fe12e78                CRYPTO_DDataRead
  .text.CRYPTO_QDataWrite
-                0x000000000fe12ec8       0x22 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
-                0x000000000fe12ec8                CRYPTO_QDataWrite
+                0x000000000fe12e88       0x22 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+                0x000000000fe12e88                CRYPTO_QDataWrite
  .text.CRYPTO_KeyBufWrite
-                0x000000000fe12eea       0x30 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
-                0x000000000fe12eea                CRYPTO_KeyBufWrite
+                0x000000000fe12eaa       0x30 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+                0x000000000fe12eaa                CRYPTO_KeyBufWrite
  .text.CRYPTO_KeyBufWriteUnaligned
-                0x000000000fe12f1a       0x70 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
-                0x000000000fe12f1a                CRYPTO_KeyBufWriteUnaligned
+                0x000000000fe12eda       0x70 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+                0x000000000fe12eda                CRYPTO_KeyBufWriteUnaligned
  .text.CRYPTO_ModulusSet
-                0x000000000fe12f8a       0x2c ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
-                0x000000000fe12f8a                CRYPTO_ModulusSet
+                0x000000000fe12f4a       0x2c ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+                0x000000000fe12f4a                CRYPTO_ModulusSet
  .text.BUS_RegMaskedWrite
-                0x000000000fe12fb6       0x22 ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
+                0x000000000fe12f76       0x22 ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
  .text.TIMER_Init
-                0x000000000fe12fd8       0xa6 ./gecko_sdk_4.3.2/platform/emlib/src/em_timer.o
-                0x000000000fe12fd8                TIMER_Init
+                0x000000000fe12f98       0xa6 ./gecko_sdk_4.3.2/platform/emlib/src/em_timer.o
+                0x000000000fe12f98                TIMER_Init
  .text.mbedtls_aes_init
-                0x000000000fe1307e        0x8 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
-                0x000000000fe1307e                mbedtls_aes_init
+                0x000000000fe1303e        0x8 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
+                0x000000000fe1303e                mbedtls_aes_init
  .text.mbedtls_aes_setkey_enc
-                0x000000000fe13086       0x3c ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
-                0x000000000fe13086                mbedtls_aes_setkey_enc
+                0x000000000fe13046       0x3c ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
+                0x000000000fe13046                mbedtls_aes_setkey_enc
  .text.mbedtls_aes_crypt_ctr
-                0x000000000fe130c2      0x184 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
-                0x000000000fe130c2                mbedtls_aes_crypt_ctr
- .text.memcmp   0x000000000fe13246       0x20 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcmp.o)
-                0x000000000fe13246                memcmp
- .text.memcpy   0x000000000fe13266       0x1c /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcpy-stub.o)
-                0x000000000fe13266                memcpy
- .text.memset   0x000000000fe13282       0x10 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memset.o)
-                0x000000000fe13282                memset
-                0x000000000fe13292                linker_code_end = .
+                0x000000000fe13082      0x184 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
+                0x000000000fe13082                mbedtls_aes_crypt_ctr
+ .text.memcmp   0x000000000fe13206       0x20 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcmp.o)
+                0x000000000fe13206                memcmp
+ .text.memcpy   0x000000000fe13226       0x1c /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcpy-stub.o)
+                0x000000000fe13226                memcpy
+ .text.memset   0x000000000fe13242       0x10 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memset.o)
+                0x000000000fe13242                memset
+                0x000000000fe13252                linker_code_end = .
  *(.init)
- *fill*         0x000000000fe13292        0x2 
- .init          0x000000000fe13294        0x4 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crti.o
-                0x000000000fe13294                _init
- .init          0x000000000fe13298        0x8 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtn.o
+ *fill*         0x000000000fe13252        0x2 
+ .init          0x000000000fe13254        0x4 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crti.o
+                0x000000000fe13254                _init
+ .init          0x000000000fe13258        0x8 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtn.o
  *(.fini)
- .fini          0x000000000fe132a0        0x4 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crti.o
-                0x000000000fe132a0                _fini
- .fini          0x000000000fe132a4        0x8 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtn.o
+ .fini          0x000000000fe13260        0x4 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crti.o
+                0x000000000fe13260                _fini
+ .fini          0x000000000fe13264        0x8 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -2536,71 +2536,71 @@ LOAD /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.rodata*)
- .rodata        0x000000000fe132ac       0x10 ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi.o
+ .rodata        0x000000000fe1326c       0x10 ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi.o
  .rodata.bootload_checkApplicationPropertiesMagic.str1.1
-                0x000000000fe132bc       0x11 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
- *fill*         0x000000000fe132cd        0x3 
+                0x000000000fe1327c       0x11 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
+ *fill*         0x000000000fe1328d        0x3 
  .rodata.mainStageTable
-                0x000000000fe132d0       0x48 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
-                0x000000000fe132d0                mainStageTable
+                0x000000000fe13290       0x48 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
+                0x000000000fe13290                mainStageTable
  .rodata.sl_app_properties
-                0x000000000fe13318       0x50 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
-                0x000000000fe13318                sl_app_properties
- .rodata        0x000000000fe13368       0x11 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_util.o
- *fill*         0x000000000fe13379        0x3 
+                0x000000000fe132d8       0x50 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
+                0x000000000fe132d8                sl_app_properties
+ .rodata        0x000000000fe13328       0x11 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_util.o
+ *fill*         0x000000000fe13339        0x3 
  .rodata.gblTagParsingInfoStructs
-                0x000000000fe1337c       0x78 ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_format.o
-                0x000000000fe1337c                gblTagParsingInfoStructs
+                0x000000000fe1333c       0x78 ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_format.o
+                0x000000000fe1333c                gblTagParsingInfoStructs
  .rodata.ECC_Curve_Params
-                0x000000000fe133f4       0x8c ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
+                0x000000000fe133b4       0x8c ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
  .rodata.init_state_sha256
-                0x000000000fe13480       0x20 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
+                0x000000000fe13440       0x20 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
  .rodata.shax_padding
-                0x000000000fe134a0       0x40 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
+                0x000000000fe13460       0x40 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
  .rodata.crypto_devices
-                0x000000000fe134e0       0x10 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
+                0x000000000fe134a0       0x10 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
  *(.eh_frame*)
- .eh_frame      0x000000000fe134f0        0x0 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+ .eh_frame      0x000000000fe134b0        0x0 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
 
-.glue_7         0x000000000fe134f0        0x0
- .glue_7        0x000000000fe134f0        0x0 linker stubs
+.glue_7         0x000000000fe134b0        0x0
+ .glue_7        0x000000000fe134b0        0x0 linker stubs
 
-.glue_7t        0x000000000fe134f0        0x0
- .glue_7t       0x000000000fe134f0        0x0 linker stubs
+.glue_7t        0x000000000fe134b0        0x0
+ .glue_7t       0x000000000fe134b0        0x0 linker stubs
 
-.vfp11_veneer   0x000000000fe134f0        0x0
- .vfp11_veneer  0x000000000fe134f0        0x0 linker stubs
+.vfp11_veneer   0x000000000fe134b0        0x0
+ .vfp11_veneer  0x000000000fe134b0        0x0 linker stubs
 
-.v4_bx          0x000000000fe134f0        0x0
- .v4_bx         0x000000000fe134f0        0x0 linker stubs
+.v4_bx          0x000000000fe134b0        0x0
+ .v4_bx         0x000000000fe134b0        0x0 linker stubs
 
-.iplt           0x000000000fe134f0        0x0
- .iplt          0x000000000fe134f0        0x0 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+.iplt           0x000000000fe134b0        0x0
+ .iplt          0x000000000fe134b0        0x0 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
 
-.rel.dyn        0x000000000fe134f0        0x0
- .rel.iplt      0x000000000fe134f0        0x0 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+.rel.dyn        0x000000000fe134b0        0x0
+ .rel.iplt      0x000000000fe134b0        0x0 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000000000fe134f0                __exidx_start = .
+                0x000000000fe134b0                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000000000fe134f0                __exidx_end = .
+                0x000000000fe134b0                __exidx_end = .
 
-.copy.table     0x000000000fe134f0        0xc
-                0x000000000fe134f0                . = ALIGN (0x4)
-                0x000000000fe134f0                __copy_table_start__ = .
-                0x000000000fe134f0        0x4 LONG 0xfe134fc __etext
-                0x000000000fe134f4        0x4 LONG 0x20001008 __data_start__
-                0x000000000fe134f8        0x4 LONG 0x18 ((__data_end__ - __data_start__) / 0x4)
-                0x000000000fe134fc                __copy_table_end__ = .
+.copy.table     0x000000000fe134b0        0xc
+                0x000000000fe134b0                . = ALIGN (0x4)
+                0x000000000fe134b0                __copy_table_start__ = .
+                0x000000000fe134b0        0x4 LONG 0xfe134bc __etext
+                0x000000000fe134b4        0x4 LONG 0x20001008 __data_start__
+                0x000000000fe134b8        0x4 LONG 0x18 ((__data_end__ - __data_start__) / 0x4)
+                0x000000000fe134bc                __copy_table_end__ = .
 
-.zero.table     0x000000000fe134fc        0x0
-                0x000000000fe134fc                . = ALIGN (0x4)
-                0x000000000fe134fc                __zero_table_start__ = .
-                0x000000000fe134fc                __zero_table_end__ = .
-                0x000000000fe134fc                __etext = .
+.zero.table     0x000000000fe134bc        0x0
+                0x000000000fe134bc                . = ALIGN (0x4)
+                0x000000000fe134bc                __zero_table_start__ = .
+                0x000000000fe134bc                __zero_table_end__ = .
+                0x000000000fe134bc                __etext = .
                 0x0000000020000000                . = ORIGIN (BOOTLOADER_RESET_REGION)
 
 .bootloader_reset_section
@@ -2623,7 +2623,7 @@ LOAD /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin
 .noinit
  *(.noinit*)
 
-.data           0x0000000020001008       0x60 load address 0x000000000fe134fc
+.data           0x0000000020001008       0x60 load address 0x000000000fe134bc
                 0x0000000020001008                . = ALIGN (0x4)
                 0x0000000020001008                __data_start__ = .
  *(vtable)
@@ -2657,12 +2657,12 @@ LOAD /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin
                 [!provide]                        PROVIDE (__fini_array_end = .)
                 0x0000000020001068                . = ALIGN (0x4)
                 0x0000000020001068                __data_end__ = .
-                0x000000000fe1355c                __rom_end__ = (__etext + SIZEOF (.data))
+                0x000000000fe1351c                __rom_end__ = (__etext + SIZEOF (.data))
 
-.igot.plt       0x0000000020001068        0x0 load address 0x000000000fe1355c
+.igot.plt       0x0000000020001068        0x0 load address 0x000000000fe1351c
  .igot.plt      0x0000000020001068        0x0 /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
 
-.bss            0x0000000020001068      0x2a8 load address 0x000000000fe1355c
+.bss            0x0000000020001068      0x2a8 load address 0x000000000fe1351c
                 0x0000000020001068                . = ALIGN (0x4)
                 0x0000000020001068                __bss_start__ = .
  *(SORT_BY_ALIGNMENT(.bss*))
@@ -2694,10 +2694,10 @@ LOAD /home/jun/SimplicityStudio_v5/developer/toolchains/gnu_arm/10.3_2021.10/bin
                 0x0000000000100000                __main_flash_end__ = 0x100000
 
 .internal_storage
-                0x000000000fe134fc        0x0
+                0x000000000fe134bc        0x0
  *(.internal_storage*)
 
-.nvm            0x000000000fe134fc        0x0
+.nvm            0x000000000fe134bc        0x0
  *(.simee*)
                 0x0000000000100000                linker_nvm_end = __main_flash_end__
                 0x0000000000100000                linker_nvm_begin = (linker_nvm_end - SIZEOF (.nvm))
@@ -2828,108 +2828,108 @@ LOAD linker stubs
  .comment       0x0000000000000049       0x4a ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
  .comment       0x0000000000000049       0x4a ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
 
-.debug_info     0x0000000000000000    0x1e3ca
+.debug_info     0x0000000000000000    0x1e38c
  .debug_info    0x0000000000000000      0xa99 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG12P/Source/startup_efr32bg12p.o
  .debug_info    0x0000000000000a99      0x9c5 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG12P/Source/system_efr32bg12p.o
  .debug_info    0x000000000000145e      0x804 ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi.o
  .debug_info    0x0000000000001c62      0xb34 ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi_common.o
- .debug_info    0x0000000000002796     0x1431 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
- .debug_info    0x0000000000003bc7       0xed ./gecko_sdk_4.3.2/platform/bootloader/core/btl_core.o
- .debug_info    0x0000000000003cb4     0x1d8e ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
- .debug_info    0x0000000000005a42      0x92e ./gecko_sdk_4.3.2/platform/bootloader/core/btl_parse.o
- .debug_info    0x0000000000006370      0x63f ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
- .debug_info    0x00000000000069af      0x68a ./gecko_sdk_4.3.2/platform/bootloader/core/flash/btl_internal_flash.o
- .debug_info    0x0000000000007039      0xb42 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_delay.o
- .debug_info    0x0000000000007b7b     0x1a59 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
- .debug_info    0x00000000000095d4      0x87f ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_util.o
- .debug_info    0x0000000000009e53      0x245 ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_format.o
- .debug_info    0x000000000000a098     0x21e9 ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
- .debug_info    0x000000000000c281      0x6b5 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_crc32.o
- .debug_info    0x000000000000c936      0x513 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_aes.o
- .debug_info    0x000000000000ce49      0x8fe ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_ecdsa.o
- .debug_info    0x000000000000d747      0x3a4 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_sha256.o
- .debug_info    0x000000000000daeb       0xe1 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_tokens.o
- .debug_info    0x000000000000dbcc     0x1da5 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
- .debug_info    0x000000000000f971      0xa14 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
- .debug_info    0x0000000000010385      0x929 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/crypto_sha.o
- .debug_info    0x0000000000010cae      0x205 ./gecko_sdk_4.3.2/platform/common/toolchain/src/sl_memory.o
- .debug_info    0x0000000000010eb3     0x3f13 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
- .debug_info    0x0000000000014dc6      0xe67 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
- .debug_info    0x0000000000015c2d     0x39af ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
- .debug_info    0x00000000000195dc      0xf2e ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
- .debug_info    0x000000000001a50a      0xe67 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
- .debug_info    0x000000000001b371      0xbeb ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
- .debug_info    0x000000000001bf5c      0xa93 ./gecko_sdk_4.3.2/platform/emlib/src/em_timer.o
- .debug_info    0x000000000001c9ef      0xd5b ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
- .debug_info    0x000000000001d74a      0xc80 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
+ .debug_info    0x0000000000002796     0x13f3 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
+ .debug_info    0x0000000000003b89       0xed ./gecko_sdk_4.3.2/platform/bootloader/core/btl_core.o
+ .debug_info    0x0000000000003c76     0x1d8e ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
+ .debug_info    0x0000000000005a04      0x92e ./gecko_sdk_4.3.2/platform/bootloader/core/btl_parse.o
+ .debug_info    0x0000000000006332      0x63f ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
+ .debug_info    0x0000000000006971      0x68a ./gecko_sdk_4.3.2/platform/bootloader/core/flash/btl_internal_flash.o
+ .debug_info    0x0000000000006ffb      0xb42 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_delay.o
+ .debug_info    0x0000000000007b3d     0x1a59 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
+ .debug_info    0x0000000000009596      0x87f ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_util.o
+ .debug_info    0x0000000000009e15      0x245 ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_format.o
+ .debug_info    0x000000000000a05a     0x21e9 ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
+ .debug_info    0x000000000000c243      0x6b5 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_crc32.o
+ .debug_info    0x000000000000c8f8      0x513 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_aes.o
+ .debug_info    0x000000000000ce0b      0x8fe ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_ecdsa.o
+ .debug_info    0x000000000000d709      0x3a4 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_sha256.o
+ .debug_info    0x000000000000daad       0xe1 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_tokens.o
+ .debug_info    0x000000000000db8e     0x1da5 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
+ .debug_info    0x000000000000f933      0xa14 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
+ .debug_info    0x0000000000010347      0x929 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/crypto_sha.o
+ .debug_info    0x0000000000010c70      0x205 ./gecko_sdk_4.3.2/platform/common/toolchain/src/sl_memory.o
+ .debug_info    0x0000000000010e75     0x3f13 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+ .debug_info    0x0000000000014d88      0xe67 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
+ .debug_info    0x0000000000015bef     0x39af ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+ .debug_info    0x000000000001959e      0xf2e ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
+ .debug_info    0x000000000001a4cc      0xe67 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
+ .debug_info    0x000000000001b333      0xbeb ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
+ .debug_info    0x000000000001bf1e      0xa93 ./gecko_sdk_4.3.2/platform/emlib/src/em_timer.o
+ .debug_info    0x000000000001c9b1      0xd5b ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
+ .debug_info    0x000000000001d70c      0xc80 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
 
-.debug_abbrev   0x0000000000000000     0x50ad
+.debug_abbrev   0x0000000000000000     0x5091
  .debug_abbrev  0x0000000000000000      0x1f1 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG12P/Source/startup_efr32bg12p.o
  .debug_abbrev  0x00000000000001f1      0x231 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG12P/Source/system_efr32bg12p.o
  .debug_abbrev  0x0000000000000422      0x233 ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi.o
  .debug_abbrev  0x0000000000000655      0x2bb ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi_common.o
- .debug_abbrev  0x0000000000000910      0x432 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
- .debug_abbrev  0x0000000000000d42       0x8f ./gecko_sdk_4.3.2/platform/bootloader/core/btl_core.o
- .debug_abbrev  0x0000000000000dd1      0x37f ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
- .debug_abbrev  0x0000000000001150      0x1f8 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_parse.o
- .debug_abbrev  0x0000000000001348      0x234 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
- .debug_abbrev  0x000000000000157c      0x15f ./gecko_sdk_4.3.2/platform/bootloader/core/flash/btl_internal_flash.o
- .debug_abbrev  0x00000000000016db      0x1f2 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_delay.o
- .debug_abbrev  0x00000000000018cd      0x3de ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
- .debug_abbrev  0x0000000000001cab      0x154 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_util.o
- .debug_abbrev  0x0000000000001dff      0x10a ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_format.o
- .debug_abbrev  0x0000000000001f09      0x42d ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
- .debug_abbrev  0x0000000000002336       0xd6 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_crc32.o
- .debug_abbrev  0x000000000000240c      0x1b4 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_aes.o
- .debug_abbrev  0x00000000000025c0      0x175 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_ecdsa.o
- .debug_abbrev  0x0000000000002735      0x1a5 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_sha256.o
- .debug_abbrev  0x00000000000028da       0x67 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_tokens.o
- .debug_abbrev  0x0000000000002941      0x467 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
- .debug_abbrev  0x0000000000002da8      0x28a ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
- .debug_abbrev  0x0000000000003032      0x254 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/crypto_sha.o
- .debug_abbrev  0x0000000000003286      0x11e ./gecko_sdk_4.3.2/platform/common/toolchain/src/sl_memory.o
- .debug_abbrev  0x00000000000033a4      0x577 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
- .debug_abbrev  0x000000000000391b      0x379 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
- .debug_abbrev  0x0000000000003c94      0x4ae ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
- .debug_abbrev  0x0000000000004142      0x375 ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
- .debug_abbrev  0x00000000000044b7      0x2d5 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
- .debug_abbrev  0x000000000000478c      0x234 ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
- .debug_abbrev  0x00000000000049c0      0x282 ./gecko_sdk_4.3.2/platform/emlib/src/em_timer.o
- .debug_abbrev  0x0000000000004c42      0x216 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
- .debug_abbrev  0x0000000000004e58      0x255 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
+ .debug_abbrev  0x0000000000000910      0x416 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
+ .debug_abbrev  0x0000000000000d26       0x8f ./gecko_sdk_4.3.2/platform/bootloader/core/btl_core.o
+ .debug_abbrev  0x0000000000000db5      0x37f ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
+ .debug_abbrev  0x0000000000001134      0x1f8 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_parse.o
+ .debug_abbrev  0x000000000000132c      0x234 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
+ .debug_abbrev  0x0000000000001560      0x15f ./gecko_sdk_4.3.2/platform/bootloader/core/flash/btl_internal_flash.o
+ .debug_abbrev  0x00000000000016bf      0x1f2 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_delay.o
+ .debug_abbrev  0x00000000000018b1      0x3de ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
+ .debug_abbrev  0x0000000000001c8f      0x154 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_util.o
+ .debug_abbrev  0x0000000000001de3      0x10a ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_format.o
+ .debug_abbrev  0x0000000000001eed      0x42d ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
+ .debug_abbrev  0x000000000000231a       0xd6 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_crc32.o
+ .debug_abbrev  0x00000000000023f0      0x1b4 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_aes.o
+ .debug_abbrev  0x00000000000025a4      0x175 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_ecdsa.o
+ .debug_abbrev  0x0000000000002719      0x1a5 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_sha256.o
+ .debug_abbrev  0x00000000000028be       0x67 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_tokens.o
+ .debug_abbrev  0x0000000000002925      0x467 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
+ .debug_abbrev  0x0000000000002d8c      0x28a ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
+ .debug_abbrev  0x0000000000003016      0x254 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/crypto_sha.o
+ .debug_abbrev  0x000000000000326a      0x11e ./gecko_sdk_4.3.2/platform/common/toolchain/src/sl_memory.o
+ .debug_abbrev  0x0000000000003388      0x577 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+ .debug_abbrev  0x00000000000038ff      0x379 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
+ .debug_abbrev  0x0000000000003c78      0x4ae ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+ .debug_abbrev  0x0000000000004126      0x375 ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
+ .debug_abbrev  0x000000000000449b      0x2d5 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
+ .debug_abbrev  0x0000000000004770      0x234 ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
+ .debug_abbrev  0x00000000000049a4      0x282 ./gecko_sdk_4.3.2/platform/emlib/src/em_timer.o
+ .debug_abbrev  0x0000000000004c26      0x216 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
+ .debug_abbrev  0x0000000000004e3c      0x255 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
 
-.debug_loc      0x0000000000000000     0xf815
+.debug_loc      0x0000000000000000     0xf826
  .debug_loc     0x0000000000000000       0x20 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG12P/Source/startup_efr32bg12p.o
  .debug_loc     0x0000000000000020       0xd8 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG12P/Source/system_efr32bg12p.o
  .debug_loc     0x00000000000000f8       0x5c ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi.o
  .debug_loc     0x0000000000000154      0x257 ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi_common.o
- .debug_loc     0x00000000000003ab      0x89f ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
- .debug_loc     0x0000000000000c4a      0x100 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
- .debug_loc     0x0000000000000d4a      0x28f ./gecko_sdk_4.3.2/platform/bootloader/core/btl_parse.o
- .debug_loc     0x0000000000000fd9       0xc8 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
- .debug_loc     0x00000000000010a1      0x729 ./gecko_sdk_4.3.2/platform/bootloader/core/flash/btl_internal_flash.o
- .debug_loc     0x00000000000017ca      0x1ab ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_delay.o
- .debug_loc     0x0000000000001975      0x7f2 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
- .debug_loc     0x0000000000002167      0x10f ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_util.o
- .debug_loc     0x0000000000002276       0x85 ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_format.o
- .debug_loc     0x00000000000022fb     0x104e ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
- .debug_loc     0x0000000000003349       0xba ./gecko_sdk_4.3.2/platform/bootloader/security/btl_crc32.o
- .debug_loc     0x0000000000003403      0x486 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_aes.o
- .debug_loc     0x0000000000003889      0x143 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_ecdsa.o
- .debug_loc     0x00000000000039cc      0x288 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_sha256.o
- .debug_loc     0x0000000000003c54     0x1173 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
- .debug_loc     0x0000000000004dc7      0xa9b ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
- .debug_loc     0x0000000000005862      0x302 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/crypto_sha.o
- .debug_loc     0x0000000000005b64       0x9c ./gecko_sdk_4.3.2/platform/common/toolchain/src/sl_memory.o
- .debug_loc     0x0000000000005c00     0x3345 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
- .debug_loc     0x0000000000008f45      0x639 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
- .debug_loc     0x000000000000957e     0x4397 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
- .debug_loc     0x000000000000d915      0x8f2 ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
- .debug_loc     0x000000000000e207      0x832 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
- .debug_loc     0x000000000000ea39      0x179 ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
- .debug_loc     0x000000000000ebb2      0x2b3 ./gecko_sdk_4.3.2/platform/emlib/src/em_timer.o
- .debug_loc     0x000000000000ee65      0x7c1 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
- .debug_loc     0x000000000000f626      0x1ef ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
+ .debug_loc     0x00000000000003ab      0x8b0 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
+ .debug_loc     0x0000000000000c5b      0x100 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
+ .debug_loc     0x0000000000000d5b      0x28f ./gecko_sdk_4.3.2/platform/bootloader/core/btl_parse.o
+ .debug_loc     0x0000000000000fea       0xc8 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
+ .debug_loc     0x00000000000010b2      0x729 ./gecko_sdk_4.3.2/platform/bootloader/core/flash/btl_internal_flash.o
+ .debug_loc     0x00000000000017db      0x1ab ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_delay.o
+ .debug_loc     0x0000000000001986      0x7f2 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
+ .debug_loc     0x0000000000002178      0x10f ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_util.o
+ .debug_loc     0x0000000000002287       0x85 ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_format.o
+ .debug_loc     0x000000000000230c     0x104e ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
+ .debug_loc     0x000000000000335a       0xba ./gecko_sdk_4.3.2/platform/bootloader/security/btl_crc32.o
+ .debug_loc     0x0000000000003414      0x486 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_aes.o
+ .debug_loc     0x000000000000389a      0x143 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_ecdsa.o
+ .debug_loc     0x00000000000039dd      0x288 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_sha256.o
+ .debug_loc     0x0000000000003c65     0x1173 ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
+ .debug_loc     0x0000000000004dd8      0xa9b ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
+ .debug_loc     0x0000000000005873      0x302 ./gecko_sdk_4.3.2/platform/bootloader/security/sha/crypto_sha.o
+ .debug_loc     0x0000000000005b75       0x9c ./gecko_sdk_4.3.2/platform/common/toolchain/src/sl_memory.o
+ .debug_loc     0x0000000000005c11     0x3345 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+ .debug_loc     0x0000000000008f56      0x639 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
+ .debug_loc     0x000000000000958f     0x4397 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+ .debug_loc     0x000000000000d926      0x8f2 ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
+ .debug_loc     0x000000000000e218      0x832 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
+ .debug_loc     0x000000000000ea4a      0x179 ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
+ .debug_loc     0x000000000000ebc3      0x2b3 ./gecko_sdk_4.3.2/platform/emlib/src/em_timer.o
+ .debug_loc     0x000000000000ee76      0x7c1 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
+ .debug_loc     0x000000000000f637      0x1ef ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
 
 .debug_aranges  0x0000000000000000      0xbe0
  .debug_aranges
@@ -3034,40 +3034,40 @@ LOAD linker stubs
  .debug_ranges  0x0000000000001808       0x68 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
  .debug_ranges  0x0000000000001870       0xa0 ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
 
-.debug_line     0x0000000000000000     0xdffc
+.debug_line     0x0000000000000000     0xdfb9
  .debug_line    0x0000000000000000      0x397 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG12P/Source/startup_efr32bg12p.o
  .debug_line    0x0000000000000397      0x3fe ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG12P/Source/system_efr32bg12p.o
  .debug_line    0x0000000000000795      0x4af ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi.o
  .debug_line    0x0000000000000c44      0x621 ./gecko_sdk_4.3.2/platform/bootloader/communication/bgapi-uart-dfu/btl_comm_bgapi_common.o
- .debug_line    0x0000000000001265      0x86a ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
- .debug_line    0x0000000000001acf      0x172 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_core.o
- .debug_line    0x0000000000001c41      0x877 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
- .debug_line    0x00000000000024b8      0x4ee ./gecko_sdk_4.3.2/platform/bootloader/core/btl_parse.o
- .debug_line    0x00000000000029a6      0x495 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
- .debug_line    0x0000000000002e3b      0x468 ./gecko_sdk_4.3.2/platform/bootloader/core/flash/btl_internal_flash.o
- .debug_line    0x00000000000032a3      0x3d5 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_delay.o
- .debug_line    0x0000000000003678      0x963 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
- .debug_line    0x0000000000003fdb      0x2f0 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_util.o
- .debug_line    0x00000000000042cb      0x29a ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_format.o
- .debug_line    0x0000000000004565      0xefd ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
- .debug_line    0x0000000000005462      0x2b1 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_crc32.o
- .debug_line    0x0000000000005713      0x39f ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_aes.o
- .debug_line    0x0000000000005ab2      0x2e6 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_ecdsa.o
- .debug_line    0x0000000000005d98      0x304 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_sha256.o
- .debug_line    0x000000000000609c      0x1b5 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_tokens.o
- .debug_line    0x0000000000006251      0xace ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
- .debug_line    0x0000000000006d1f      0x50b ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
- .debug_line    0x000000000000722a      0x5ce ./gecko_sdk_4.3.2/platform/bootloader/security/sha/crypto_sha.o
- .debug_line    0x00000000000077f8      0x2b4 ./gecko_sdk_4.3.2/platform/common/toolchain/src/sl_memory.o
- .debug_line    0x0000000000007aac     0x2367 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
- .debug_line    0x0000000000009e13      0x7c8 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
- .debug_line    0x000000000000a5db     0x15d6 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
- .debug_line    0x000000000000bbb1      0x646 ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
- .debug_line    0x000000000000c1f7      0x8a2 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
- .debug_line    0x000000000000ca99      0x449 ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
- .debug_line    0x000000000000cee2      0x561 ./gecko_sdk_4.3.2/platform/emlib/src/em_timer.o
- .debug_line    0x000000000000d443      0x82b ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
- .debug_line    0x000000000000dc6e      0x38e ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
+ .debug_line    0x0000000000001265      0x827 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_bootload.o
+ .debug_line    0x0000000000001a8c      0x172 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_core.o
+ .debug_line    0x0000000000001bfe      0x877 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_main.o
+ .debug_line    0x0000000000002475      0x4ee ./gecko_sdk_4.3.2/platform/bootloader/core/btl_parse.o
+ .debug_line    0x0000000000002963      0x495 ./gecko_sdk_4.3.2/platform/bootloader/core/btl_reset.o
+ .debug_line    0x0000000000002df8      0x468 ./gecko_sdk_4.3.2/platform/bootloader/core/flash/btl_internal_flash.o
+ .debug_line    0x0000000000003260      0x3d5 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_delay.o
+ .debug_line    0x0000000000003635      0x963 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_uart.o
+ .debug_line    0x0000000000003f98      0x2f0 ./gecko_sdk_4.3.2/platform/bootloader/driver/btl_driver_util.o
+ .debug_line    0x0000000000004288      0x29a ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_format.o
+ .debug_line    0x0000000000004522      0xefd ./gecko_sdk_4.3.2/platform/bootloader/parser/gbl/btl_gbl_parser.o
+ .debug_line    0x000000000000541f      0x2b1 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_crc32.o
+ .debug_line    0x00000000000056d0      0x39f ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_aes.o
+ .debug_line    0x0000000000005a6f      0x2e6 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_ecdsa.o
+ .debug_line    0x0000000000005d55      0x304 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_sha256.o
+ .debug_line    0x0000000000006059      0x1b5 ./gecko_sdk_4.3.2/platform/bootloader/security/btl_security_tokens.o
+ .debug_line    0x000000000000620e      0xace ./gecko_sdk_4.3.2/platform/bootloader/security/ecc/ecc.o
+ .debug_line    0x0000000000006cdc      0x50b ./gecko_sdk_4.3.2/platform/bootloader/security/sha/btl_sha256.o
+ .debug_line    0x00000000000071e7      0x5ce ./gecko_sdk_4.3.2/platform/bootloader/security/sha/crypto_sha.o
+ .debug_line    0x00000000000077b5      0x2b4 ./gecko_sdk_4.3.2/platform/common/toolchain/src/sl_memory.o
+ .debug_line    0x0000000000007a69     0x2367 ./gecko_sdk_4.3.2/platform/emlib/src/em_cmu.o
+ .debug_line    0x0000000000009dd0      0x7c8 ./gecko_sdk_4.3.2/platform/emlib/src/em_core.o
+ .debug_line    0x000000000000a598     0x15d6 ./gecko_sdk_4.3.2/platform/emlib/src/em_crypto.o
+ .debug_line    0x000000000000bb6e      0x646 ./gecko_sdk_4.3.2/platform/emlib/src/em_gpio.o
+ .debug_line    0x000000000000c1b4      0x8a2 ./gecko_sdk_4.3.2/platform/emlib/src/em_msc.o
+ .debug_line    0x000000000000ca56      0x449 ./gecko_sdk_4.3.2/platform/emlib/src/em_system.o
+ .debug_line    0x000000000000ce9f      0x561 ./gecko_sdk_4.3.2/platform/emlib/src/em_timer.o
+ .debug_line    0x000000000000d400      0x82b ./gecko_sdk_4.3.2/platform/security/sl_component/sl_mbedtls_support/src/crypto_aes.o
+ .debug_line    0x000000000000dc2b      0x38e ./gecko_sdk_4.3.2/platform/security/sl_component/sl_psa_driver/src/crypto_management.o
 
 .debug_str      0x0000000000000000     0x7da8
  .debug_str     0x0000000000000000      0x6d6 ./gecko_sdk_4.3.2/platform/Device/SiliconLabs/EFR32BG12P/Source/startup_efr32bg12p.o

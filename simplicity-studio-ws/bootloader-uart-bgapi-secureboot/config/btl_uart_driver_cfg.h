@@ -73,7 +73,7 @@
 //#define SL_SERIAL_UART_RTS_PIN                   7
 // [USART_SL_SERIAL_UART]$
 
-//Cookies pinout
+// MODIFIED: Cookies pinout
  #define SL_SERIAL_UART_PERIPHERAL      USART0
  #define SL_SERIAL_UART_PERIPHERAL_NO   0
 

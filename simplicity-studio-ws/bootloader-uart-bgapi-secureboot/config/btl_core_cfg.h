@@ -38,7 +38,7 @@
 // <e BOOTLOADER_ENFORCE_SECURE_BOOT> Enable secure boot
 // <i> Default: 0
 // <i> Enforce signature verification on the application image in internal flash before every boot.
-#define BOOTLOADER_ENFORCE_SECURE_BOOT                    0
+#define BOOTLOADER_ENFORCE_SECURE_BOOT                    1 // MODIFIED
 
 // APPLICATION_WRITE_DISABLE: Prevent write/erase of verified application
 // Default: 0

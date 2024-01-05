@@ -1,0 +1,37 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: bootloader-uart-bgapi-secureboot-fw-signed-encrypt
+label: bootloader-uart-bgapi-secureboot-fw-signed-encrypt
+description: |
+  Standalone Bootloader using the BGAPI protocol for UART DFU. This is the recommended UART bootloader for the BLE protocol stack.
+category: Example|Bootloader
+filter:
+- name: Device Type
+  value: [NCP]
+- name: MCU
+  value: [Bootloader]
+- name: Project Difficulty
+  value: [Advanced]
+package: bootloader
+quality: production
+readme:
+- {path: readme.md}
+sdk: {id: gecko_sdk, version: 4.3.2}
+toolchain_settings: []
+component:
+- {id: bootloader_token_management}
+- {id: bootloader_serial_driver}
+- {id: bootloader_crc}
+- {id: bootloader_aes_sha_ecdsa}
+- {id: EFR32BG12P132F1024GL125}
+- {id: bootloader_delay_driver}
+- {id: bootloader_debug}
+- {id: bootloader_bgapi_uartdfu}
+- {id: bootloader_image_parser}
+- {id: bootloader_core}
+configuration:
+- {name: SL_VCOM_ENABLE, value: '1'}
+ui_hints:
+  highlight:
+  - {path: readme.md, focus: true}
+post_build: {path: bootloader-uart-bgapi-secureboot-fw-signed-encrypt.slpb, profile: bootloader-uart-bgapi-secureboot-fw-signed-encrypt}
+
