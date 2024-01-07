@@ -1,9 +1,0 @@
-#CRC Codes for initially generated config files -- do not modify!
-btl_core_cfg.h=-719964418
-btl_debug_cfg.h=194190380
-btl_uart_driver_cfg.h=-284821930
-emlib_core_debug_config.h=171843933
-psa_crypto_config.h=-1777265300
-sl_mbedtls_config.h=-1940460892
-sl_mbedtls_device_config.h=-1083250924
-sl_memory_config.h=-995392215

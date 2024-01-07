@@ -13,3 +13,4 @@ btl-fw-upgrade-ws/firmware/images/app-sign-key.pem
 *.s37
 btl-fw-upgrade-ws/firmware/bt_host_uart_dfu
 *.out
+simplicity-studio-ws/bootloader-uart-bgapi
