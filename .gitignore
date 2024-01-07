@@ -3,3 +3,13 @@ docs/miscellaneous
 *browser
 *metadata
 *outgoing
+btl-fw-upgrade-ws/keys/app-encrypt-key 
+btl-fw-upgrade-ws/keys/app-sign-key
+btl-fw-upgrade-ws/keys/app-sign-key.pub
+btl-fw-upgrade-ws/keys/app-sign-pubkey-tokens.txt
+btl-fw-upgrade-ws/firmware/images/app-encrypt-key.txt
+btl-fw-upgrade-ws/firmware/images/app-sign-key.pem
+*.gbl
+*.s37
+btl-fw-upgrade-ws/firmware/bt_host_uart_dfu
+*.out
