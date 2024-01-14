@@ -45,23 +45,32 @@ It is recommended to run this example first. It will solve most of the USART com
    `//Cookies pinout`
    
     `#define SL_IOSTREAM_USART_VCOM_PERIPHERAL      USART0`
-    #define SL_IOSTREAM_USART_VCOM_PERIPHERAL_NO   0
+   
+    `#define SL_IOSTREAM_USART_VCOM_PERIPHERAL_NO   0`
 
-    #define SL_IOSTREAM_USART_VCOM_TX_PORT         gpioPortA
-    #define SL_IOSTREAM_USART_VCOM_TX_PIN          0
-    #define SL_IOSTREAM_USART_VCOM_TX_LOC          0
+    `#define SL_IOSTREAM_USART_VCOM_TX_PORT         gpioPortA`
+   
+    `#define SL_IOSTREAM_USART_VCOM_TX_PIN          0`
+   
+    `#define SL_IOSTREAM_USART_VCOM_TX_LOC          0`
 
-    #define SL_IOSTREAM_USART_VCOM_RX_PORT         gpioPortA
-    #define SL_IOSTREAM_USART_VCOM_RX_PIN          1
-    #define SL_IOSTREAM_USART_VCOM_RX_LOC          0
+    `#define SL_IOSTREAM_USART_VCOM_RX_PORT         gpioPortA`
+   
+    `#define SL_IOSTREAM_USART_VCOM_RX_PIN          1`
+   
+    `#define SL_IOSTREAM_USART_VCOM_RX_LOC          0`
 
-    #define SL_IOSTREAM_USART_VCOM_CTS_PORT        gpioPortA
-    #define SL_IOSTREAM_USART_VCOM_CTS_PIN         2
-    #define SL_IOSTREAM_USART_VCOM_CTS_LOC         0 // PA2 do not CTS
+    `#define SL_IOSTREAM_USART_VCOM_CTS_PORT        gpioPortA`
+   
+    `#define SL_IOSTREAM_USART_VCOM_CTS_PIN         2`
+   
+    `#define SL_IOSTREAM_USART_VCOM_CTS_LOC         0 // PA2 do not CTS`
 
-    #define SL_IOSTREAM_USART_VCOM_RTS_PORT        gpioPortA
-    #define SL_IOSTREAM_USART_VCOM_RTS_PIN         3
-    #define SL_IOSTREAM_USART_VCOM_RTS_LOC         0 // PA3 do not RTS`
+    `#define SL_IOSTREAM_USART_VCOM_RTS_PORT        gpioPortA`
+   
+    `#define SL_IOSTREAM_USART_VCOM_RTS_PIN         3`
+   
+    `#define SL_IOSTREAM_USART_VCOM_RTS_LOC         0 // PA3 do not RTS`
 
 ![4](https://github.com/jun-source/cookies-bootloader/assets/122213795/0fbbf616-c5ec-4b39-8671-b050b48f74fb)
 
@@ -110,21 +119,29 @@ The next step will be loading one of the bootloader examples provided by the man
  4. Match USART0 pinout definition in the source code with target device's pinout by modifying *bootloader-uart-bgapi/config/btl_uart_driver_cfg.h* with the following lines.
 
     `//Cookies pinout`
+    
      `#define SL_SERIAL_UART_PERIPHERAL      USART0`
+    
      `#define SL_SERIAL_UART_PERIPHERAL_NO   0`
 
      `#define SL_SERIAL_UART_TX_PORT         gpioPortA`
+    
      `#define SL_SERIAL_UART_TX_PIN          0`
+    
      `#define SL_SERIAL_UART_TX_LOC          0`
 
      `#define SL_SERIAL_UART_RX_PORT         gpioPortA`
+    
      `#define SL_SERIAL_UART_RX_PIN          1`
+    
      `#define SL_SERIAL_UART_RX_LOC          0`
 
      `#define SL_SERIAL_UART_CTS_PORT        gpioPortA`
+    
      `#define SL_SERIAL_UART_CTS_PIN         2`
 
      `#define SL_SERIAL_UART_RTS_PORT        gpioPortA`
+    
      `#define SL_SERIAL_UART_RTS_PIN         3`
 
 ![10](https://github.com/jun-source/cookies-bootloader/assets/122213795/34fa9b1d-c6b5-45c6-a509-c79aee17b5ae)
