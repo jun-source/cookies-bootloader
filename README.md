@@ -70,7 +70,7 @@ It is recommended to run this example first. It will solve most of the USART com
 
 ![5](https://github.com/jun-source/cookies-bootloader/assets/122213795/cd471883-73c0-425d-a485-4d88440c30e7)
 
-   You should some logs on the console about the status of the operation.
+   You should get some logs on the console about the status of the operation.
 
 ![6](https://github.com/jun-source/cookies-bootloader/assets/122213795/df7386db-a29a-42f4-bd00-41f337b4bffa)
 
