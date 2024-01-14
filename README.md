@@ -1,11 +1,13 @@
-# cookies-bootloader (PROVISIONAL)
+#  Enabling secure boot and secure firmware upgrade for Cookies WSN boards
 
 The main objective of this project is to enable for the first time secure boot along with secure firmware upgrade for Cookies WSN boards. The main SoC of those devices is *EFR32BG12P132F1024GL125* from Silicon Labs. The manufacturer provides with some examples already. Those examples are solutions that has been tested on real case scenarios. Besides, an example coming from the manufacturer is always a plus because it has been designed taking into consideration the hardware running beneath and it also gives more confidence about using some sensitive features like secure boot. With the need of commercial proven software and a time feasible solution, it has been decided that the best approach for the project is taking the solutions provided by the manufacturer and customize them based on our needs. This document will show you how to create the projects based on the provided examples and the adaptation that has to be made for Cookies' boards.
 
 **Notes:**
 
 - The following steps were **only** tested on Cookies' boards. In this document, they will be referred as the **target devices**. On the other hand, we will use the term **host device** to refer the machine used for development.
-- All the modified projects are provided at *<root-project>/simplicity-studio-ws/examples*. In this document, we will explain the modifications made of the base examples provided by the manufacturer. But if you want to skip some of the steps, you can create  your project by importing those examples into your workspace through the GUI at *File/Import* [IMAGE 3]
+- All the modified projects are provided at *<root-project>/simplicity-studio-ws/examples*. In this document, we will explain the modifications made of the base examples provided by the manufacturer. But if you want to skip some of the steps, you can create  your project by importing those examples into your workspace through the GUI at *File/Import*.
+  
+  ![3](https://github.com/jun-source/cookies-bootloader/assets/122213795/8a28a916-8d35-4494-adbd-9760ae37f4bf)
 
 ## STEP 1: DOWNLOAD SIMPLICITY STUDIO AND SET UP YOUR HOST DEVICE
 
