@@ -110,9 +110,9 @@ The next step will be loading one of the bootloader examples provided by the man
 
 ![13](https://github.com/jun-source/cookies-bootloader/assets/122213795/a4cc7254-da3e-4a00-9365-9c76abd83ac9)
 
-    For example, we are able enable secure boot at *bootloader-uart-bgapi/config/btl_core_cfg.h* by setting *#define BOOTLOADER_ENFORCE_SECURE_BOOT* macro to 1. On STEPS 5 and 6, we will create two bootloader projects based on *Bootloader - NCP BGAOI UART DFU* example with only secure boot activated, and with secure boot and secure DFU activated, respectively. 
+  For example, we are able to enable secure boot at *bootloader-uart-bgapi/config/btl_core_cfg.h* by setting *#define BOOTLOADER_ENFORCE_SECURE_BOOT* macro to 1. On STEPS 5 and 6, we will create two bootloader projects based on *Bootloader - NCP BGAOI UART DFU* example with only secure boot activated, and with secure boot and secure DFU activated, respectively. 
 
-    On STEP 3,  the current one, we will load a bootloader with no features enabled (default).
+  On STEP 3,  the current one, we will load a bootloader with no features enabled (default).
 
 ![14](https://github.com/jun-source/cookies-bootloader/assets/122213795/5faa2eab-6083-45a1-ab3a-bebb2abd98eb)
 
