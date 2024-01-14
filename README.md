@@ -42,8 +42,8 @@ It is recommended to run this example first. It will solve most of the USART com
 
 6. You need to match USART pin definition in the project with the pinout of the target device. The configuration is done at *iostream_usart_baremetal/config/sl_iostream_usart_vcom_config.h*. In the case of Cookies, USART0 will be used for the communication between the host and the target device. RTS and CTS are disabled.  Add the following lines to the file:
 
-   `//Cookies pinout
-    #define SL_IOSTREAM_USART_VCOM_PERIPHERAL      USART0
+   `//Cookies pinout`
+    `#define SL_IOSTREAM_USART_VCOM_PERIPHERAL      USART0`
     #define SL_IOSTREAM_USART_VCOM_PERIPHERAL_NO   0
 
     #define SL_IOSTREAM_USART_VCOM_TX_PORT         gpioPortA
