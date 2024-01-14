@@ -13,11 +13,14 @@ The main objective of this project is to enable for the first time secure boot a
 
 1. Follow the instructions given by *https://docs.silabs.com/simplicity-studio-5-users-guide/latest/ss-5-users-guide-getting-started/install-ss-5-and-software*.
 2. Launch Simplicity Studio GUI by executing *SimplicityStudio_v5/studiowayland.sh*.
-3. Connect your host device to the target device through a STK debugger. Don't forget to switch your debugger board to **AEM**. [IMAGE MISSING] 
+3. Connect your host device to the target device through a STK debugger. Don't forget to switch your debugger board to **AEM**.
+
+![Cookies-stk](https://github.com/jun-source/cookies-bootloader/assets/122213795/417a46f1-a573-42a6-a4a2-077e3318579e)
+
 4. Continue with the installation. A wizard will pop up listing the recommended tools and SDKs for the detected devices. If the target device is not detected automatically click on *Simplicty Studio -> Launcher -> Overview -> Board -> Detect Target Part* . If the GUI is not able to detect the device, you may install manually GSDK v4 (it contains the examples used in this project).
-5. We recommend you to download CoolTerm for serial communication with the target device.
-6. Close Simplicity Studio.
-7. Clone this repository: *git clone git@github.com:jun-source/cookies-bootloader.git*
+6. We recommend you to download CoolTerm for serial communication with the target device.
+7. Close Simplicity Studio.
+8. Clone this repository: *git clone git@github.com:jun-source/cookies-bootloader.git*
 
 ## STEP 2: RUN IOSTREAM_USART_BAREMETAL EXAMPLE ON YOUR TARGET DEVICE
 
@@ -29,43 +32,55 @@ It is recommended to run this example first. It will solve most of the USART com
 
 3. Make sure that workspace is set to *<root-project>/simplicity-studio-ws* by selecting it on *File/Switch Workspace* on the GUI.
 
-4. Click on *Detect Target Part* so that the GUI detects the connected devices [IMAGE 1].
+4. Click on *Detect Target Part* so that the GUI detects the connected devices.
 
-5. Create a new project based on *Platform - I/O Stream USART Bare-metal* example provided by the SDK. This example project uses the I/O Stream service running in a bare-metal configuration to demonstrate the use of USART communication over the virtual COM port (VCOM). The application will echo back any characters it receives over the serial connection. The VCOM serial port can be used either over USB or by connecting to port 4902 if the kit is connected via Ethernet [IMAGE 2]
+![1](https://github.com/jun-source/cookies-bootloader/assets/122213795/d68c4942-9674-4782-bdad-b0c169ff6be3)
 
-6. You need to match USART pin definition in the project with the pinout of the target device. The configuration is done at *iostream_usart_baremetal/config/sl_iostream_usart_vcom_config.h*. In the case of Cookies, USART0 will be used for the communication between the host and the target device. RTS and CTS are disabled.  Add the following lines to the file:
+6. Create a new project based on *Platform - I/O Stream USART Bare-metal* example provided by the SDK. This example project uses the I/O Stream service running in a bare-metal configuration to demonstrate the use of USART communication over the virtual COM port (VCOM). The application will echo back any characters it receives over the serial connection. The VCOM serial port can be used either over USB or by connecting to port 4902 if the kit is connected via Ethernet.
 
-   `//Cookies pinout`
-    `#define SL_IOSTREAM_USART_VCOM_PERIPHERAL      USART0`
-    `#define SL_IOSTREAM_USART_VCOM_PERIPHERAL_NO   0`
+![2](https://github.com/jun-source/cookies-bootloader/assets/122213795/cee84401-2691-400c-8fc0-f9ba5f924a8c)
 
-    `#define SL_IOSTREAM_USART_VCOM_TX_PORT         gpioPortA`
-    `#define SL_IOSTREAM_USART_VCOM_TX_PIN          0`
-    `#define SL_IOSTREAM_USART_VCOM_TX_LOC          0`
+8. You need to match USART pin definition in the project with the pinout of the target device. The configuration is done at *iostream_usart_baremetal/config/sl_iostream_usart_vcom_config.h*. In the case of Cookies, USART0 will be used for the communication between the host and the target device. RTS and CTS are disabled.  Add the following lines to the file:
 
-    `#define SL_IOSTREAM_USART_VCOM_RX_PORT         gpioPortA`
-    `#define SL_IOSTREAM_USART_VCOM_RX_PIN          1`
-    `#define SL_IOSTREAM_USART_VCOM_RX_LOC          0`
+   `//Cookies pinout
+    #define SL_IOSTREAM_USART_VCOM_PERIPHERAL      USART0
+    #define SL_IOSTREAM_USART_VCOM_PERIPHERAL_NO   0
 
-    `#define SL_IOSTREAM_USART_VCOM_CTS_PORT        gpioPortA`
-    `#define SL_IOSTREAM_USART_VCOM_CTS_PIN         2`
-    `#define SL_IOSTREAM_USART_VCOM_CTS_LOC         0 // PA2 do not CTS`
+    #define SL_IOSTREAM_USART_VCOM_TX_PORT         gpioPortA
+    #define SL_IOSTREAM_USART_VCOM_TX_PIN          0
+    #define SL_IOSTREAM_USART_VCOM_TX_LOC          0
 
-    `#define SL_IOSTREAM_USART_VCOM_RTS_PORT        gpioPortA`
-    `#define SL_IOSTREAM_USART_VCOM_RTS_PIN         3`
-    `#define SL_IOSTREAM_USART_VCOM_RTS_LOC         0 // PA3 do not RTS`
+    #define SL_IOSTREAM_USART_VCOM_RX_PORT         gpioPortA
+    #define SL_IOSTREAM_USART_VCOM_RX_PIN          1
+    #define SL_IOSTREAM_USART_VCOM_RX_LOC          0
 
-   [IMAGE 4]
+    #define SL_IOSTREAM_USART_VCOM_CTS_PORT        gpioPortA
+    #define SL_IOSTREAM_USART_VCOM_CTS_PIN         2
+    #define SL_IOSTREAM_USART_VCOM_CTS_LOC         0 // PA2 do not CTS
+
+    #define SL_IOSTREAM_USART_VCOM_RTS_PORT        gpioPortA
+    #define SL_IOSTREAM_USART_VCOM_RTS_PIN         3
+    #define SL_IOSTREAM_USART_VCOM_RTS_LOC         0 // PA3 do not RTS`
+
+![4](https://github.com/jun-source/cookies-bootloader/assets/122213795/0fbbf616-c5ec-4b39-8671-b050b48f74fb)
 
    Also, comment line 87: *#warning "IO Stream USART peripheral not configured"*, if you don't want this warning to appear when compiling. Lastly, you can find more information on EFR32BG12's datasheet and Cookie's schematic about the pinout.
 
-7. Compile the project. The executables shall be found at *iostream_usart_baremetal/Binaries*. Then click on *Run* for downloading the firmware image to the target device. [IMAGE 5]
+9. Compile the project. The executables shall be found at *iostream_usart_baremetal/Binaries*. Then click on *Run* for downloading the firmware image to the target device.
 
-   You should some logs on the console about the status of the operation [IMAGE 6]
+![5](https://github.com/jun-source/cookies-bootloader/assets/122213795/cd471883-73c0-425d-a485-4d88440c30e7)
 
-8. If the operation has been successful, disconnect the target device from the STK debugger. Then connect the target device to the host through the USB-C port available on the target device. Make sure to identify the port where the target device has been connected. [IMAGE 7]
+   You should some logs on the console about the status of the operation.
 
-9. Verify that firmware has been downloaded and it works as expected. Launch CoolTerm and open a communication channel with the target device by selecting the serial port and setting the baud rate to 115200. You should get logs from the target device similar to [IMAGE 8]. If there is no response from the target device, you might need to toggle its reset button.
+![6](https://github.com/jun-source/cookies-bootloader/assets/122213795/df7386db-a29a-42f4-bd00-41f337b4bffa)
+
+11. If the operation has been successful, disconnect the target device from the STK debugger. Then connect the target device to the host through the USB-C port available on the target device. Make sure to identify the port where the target device has been connected.
+
+![7](https://github.com/jun-source/cookies-bootloader/assets/122213795/b313c001-a5f5-415d-9f2f-c14b3add09a0)
+
+13. Verify that firmware has been downloaded and it works as expected. Launch CoolTerm and open a communication channel with the target device by selecting the serial port and setting the baud rate to 115200. If there is no response from the target device, you might need to toggle its reset button.
+
+![8](https://github.com/jun-source/cookies-bootloader/assets/122213795/bf6c719a-f83e-4973-8c80-50eda4a68582)
 
 Notes:
 
@@ -77,15 +92,17 @@ The next step will be loading one of the bootloader examples provided by the man
 
  1. Connect the target device to the STK debugger.
 
- 2. Open Simplicity Studio and create a new project based on *Bootloader - NCP BGAOI UART DFU* provided by the SDK. This is a standalone bootloader using the BGAPI protocol for UART DFU. This is the recommended UART bootloader for the BLE protocol stack [image 9].
+ 2. Open Simplicity Studio and create a new project based on *Bootloader - NCP BGAOI UART DFU* provided by the SDK. This is a standalone bootloader using the BGAPI protocol for UART DFU. This is the recommended UART bootloader for the BLE protocol stack.
 
- 3. The folder *bootloader-uart-bgapi/config* contains some header files that might need to be modified by the user for enabling features of the bootloader [image 13]
+![9](https://github.com/jun-source/cookies-bootloader/assets/122213795/7bb69dd2-76e5-4d6e-937b-49067433d1de)
+
+ 4. The folder *bootloader-uart-bgapi/config* contains some header files that might need to be modified by the user for enabling features of the bootloader [image 13]
 
     For example, we are able enable secure boot at *bootloader-uart-bgapi/config/btl_core_cfg.h* by setting *#define BOOTLOADER_ENFORCE_SECURE_BOOT* macro to 1. On Steps 5 and 6, we will create two bootloader projects based on *Bootloader - NCP BGAOI UART DFU* example with only secure boot activated, and with secure boot and secure DFU activated, respectively. 
 
     On Step 3,  the current one, we will load a bootloader with no features enabled (default) [image 14].
 
- 4. Match USART0 pinout definition in the source code with target device's pinout by modifying *bootloader-uart-bgapi/config/btl_uart_driver_cfg.h* with the following lines [image 10]:
+ 5. Match USART0 pinout definition in the source code with target device's pinout by modifying *bootloader-uart-bgapi/config/btl_uart_driver_cfg.h* with the following lines [image 10]:
 
     `//Cookies pinout`
      `#define SL_SERIAL_UART_PERIPHERAL      USART0`
@@ -105,15 +122,15 @@ The next step will be loading one of the bootloader examples provided by the man
      `#define SL_SERIAL_UART_RTS_PORT        gpioPortA`
      `#define SL_SERIAL_UART_RTS_PIN         3`
 
- 5. Generate the bootloader image by compiling the project. You can find the executables at *bootloader-uart-bgapi/artifact*. On Series 1 devices, three bootloader images are generated into the build directory: a main bootloader, a main bootloader with CRC32 checksum, and a combined first stage and main bootloader with CRC32 checksum. The main bootloader image is called *<project-name>.s37*, the main bootloader with CRC32 checksum is called *<projectname> crc.s37*, while the combined first stage image + main bootloader image with a CRC32 checksum is called *<projectname>-combined.s37*. The first time a device is programmed, whether during development or manufacturing, the combined image needs to be programmed. For subsequent programming, when a first stage bootloader is already present on the device, it is okay to download an image containing just the main bootloader. In this case, the main bootloader with CRC32 should be used. Assuming it is the first time the target device is loaded with a bootloader, we will use *<projectname>-combined.s37*. [image 11]
+ 6. Generate the bootloader image by compiling the project. You can find the executables at *bootloader-uart-bgapi/artifact*. On Series 1 devices, three bootloader images are generated into the build directory: a main bootloader, a main bootloader with CRC32 checksum, and a combined first stage and main bootloader with CRC32 checksum. The main bootloader image is called *<project-name>.s37*, the main bootloader with CRC32 checksum is called *<projectname> crc.s37*, while the combined first stage image + main bootloader image with a CRC32 checksum is called *<projectname>-combined.s37*. The first time a device is programmed, whether during development or manufacturing, the combined image needs to be programmed. For subsequent programming, when a first stage bootloader is already present on the device, it is okay to download an image containing just the main bootloader. In this case, the main bootloader with CRC32 should be used. Assuming it is the first time the target device is loaded with a bootloader, we will use *<projectname>-combined.s37*. [image 11]
 
- 6. Open a new terminal and go to *<root-project>/btl-fw-upgrade-ws*. This directory has been created for easing bootloader and firmware upgrade operations. You must `source set-env.sh` . This script will setup some environmental variables that will be needed by some other scripts.
+ 7. Open a new terminal and go to *<root-project>/btl-fw-upgrade-ws*. This directory has been created for easing bootloader and firmware upgrade operations. You must `source set-env.sh` . This script will setup some environmental variables that will be needed by some other scripts.
 
- 7. Go to *<root-project>/btl-fw-upgrade-ws/bootloader*. Bring the bootloader binaries you generated before by `cp -r ../../simplicity-studio-ws/bootloader-uart-bgapi/artifact/ images/bootloader-uart-bgapi`.
+ 8. Go to *<root-project>/btl-fw-upgrade-ws/bootloader*. Bring the bootloader binaries you generated before by `cp -r ../../simplicity-studio-ws/bootloader-uart-bgapi/artifact/ images/bootloader-uart-bgapi`.
 
- 8. Between all the bootloader binaries you must load *images/bootloader-uart-bgapi-combined.s37* (main booloader + first stage) by executing `bash load-bootloader.sh -e -f images/bootloader-uart-bgapi/bootloader-uart-bgapi-combined.s37`. [image 12]
+ 9. Between all the bootloader binaries you must load *images/bootloader-uart-bgapi-combined.s37* (main booloader + first stage) by executing `bash load-bootloader.sh -e -f images/bootloader-uart-bgapi/bootloader-uart-bgapi-combined.s37`. [image 12]
 
- 9. If you open the Simplicty Commander tool, you will see that the positions of the flash reserved for the bootloader contain now some data, if the bootloader has been successfully loaded [image 15].
+ 10. If you open the Simplicty Commander tool, you will see that the positions of the flash reserved for the bootloader contain now some data, if the bootloader has been successfully loaded [image 15].
 
     
 
