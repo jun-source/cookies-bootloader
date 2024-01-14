@@ -184,25 +184,25 @@ The next step will be loading one of the bootloader examples provided by the man
 
       In other words, you need to fix the relative paths of the includes. There will probably be other files with the same issue, this time even from the Simplicity Studio SDK installation folder, you must fix them too. Once you have done it, there shall not be any more compiling issues.
 
-   4. Open a terminal. Don't forget to *source <root-project>/btl-fw-upgrade-ws/set-env.sh*. Go to *<root-project>/btl-fw-upgrade-ws/firmware/images* . Then bring the firmware binary from *<root-project>/simplicity-studio-ws/iostream_usart_baremetal/GNU\ ARM\ v10.3.1\ -\ Default/iostream_usart_baremetal.out* .
+   3. Open a terminal. Don't forget to *source <root-project>/btl-fw-upgrade-ws/set-env.sh*. Go to *<root-project>/btl-fw-upgrade-ws/firmware/images* . Then bring the firmware binary from *<root-project>/simplicity-studio-ws/iostream_usart_baremetal/GNU\ ARM\ v10.3.1\ -\ Default/iostream_usart_baremetal.out* .
 
-   5. The next step will be creating the GBL files. You can either execute the correspondent CLI commands from Simplicity Commander on your own or you can use the script provided by the manufacturer *create_bl_files.sh* which is based those very same CLI commands. In this example, we will use the script which is already included in the cloned git repository at *<root-project>/btl-fw-upgrade-ws/firmware/images*.
+   4. The next step will be creating the GBL files. You can either execute the correspondent CLI commands from Simplicity Commander on your own or you can use the script provided by the manufacturer *create_bl_files.sh* which is based those very same CLI commands. In this example, we will use the script which is already included in the cloned git repository at *<root-project>/btl-fw-upgrade-ws/firmware/images*.
 
-   6. Running *create_bl_files.sh* creates multiple GBL files in a subfolder named **output_gbl**. The file named *full.gbl* is the upgrade image used for UART DFU. The other files are related to OTA upgrades and they can be ignored. If signing and/or encryption keys (named app-sign-key.pem, app-encrypt-key.txt) are present in the same directory, then the script also creates secure variants of the GBL files.
+   5. Running *create_bl_files.sh* creates multiple GBL files in a subfolder named **output_gbl**. The file named *full.gbl* is the upgrade image used for UART DFU. The other files are related to OTA upgrades and they can be ignored. If signing and/or encryption keys (named app-sign-key.pem, app-encrypt-key.txt) are present in the same directory, then the script also creates secure variants of the GBL files.
 
 ![18](https://github.com/jun-source/cookies-bootloader/assets/122213795/234649d7-01ce-4e56-bd4c-037114fd30ca)
 
-   8.  The next step will be generating *bt_host_uart_dfu* host application. 
+   6.  The next step will be generating *bt_host_uart_dfu* host application. 
 
-   9. `cd /home/$USER/SimplicityStudio/SDKs/gecko_sdk/app/bluetooth/example_host/bt_host_uart_dfu` and build the application by executing `make`. Copy the executable from */home/$USER/SimplicityStudio/SDKs/gecko_sdk/app/bluetooth/example_host/bt_host_uart_dfu/exe/bt_host_uart_dfu* to  *<root-project>/btl-fw-upgrade-ws/firmware*.
+   7. `cd /home/$USER/SimplicityStudio/SDKs/gecko_sdk/app/bluetooth/example_host/bt_host_uart_dfu` and build the application by executing `make`. Copy the executable from */home/$USER/SimplicityStudio/SDKs/gecko_sdk/app/bluetooth/example_host/bt_host_uart_dfu/exe/bt_host_uart_dfu* to  *<root-project>/btl-fw-upgrade-ws/firmware*.
 
-   10. Execute `bash fw-upgrade.sh -p images/output_gbl/full.gbl` to initialize the firmware upgrade.
+   8. Execute `bash fw-upgrade.sh -p images/output_gbl/full.gbl` to initialize the firmware upgrade.
 
-   11. Click on the reset button of the target device to go into bootloader mode.
+   9. Click on the reset button of the target device to go into bootloader mode.
        
 ![19](https://github.com/jun-source/cookies-bootloader/assets/122213795/526f849d-41fc-4b05-bffe-52f477d86952)
 
-   13. For double-check, open CoolTerm and make sure that the application is running. Don't forget to toggle the reset button if you see no messages.
+   10. For double-check, open CoolTerm and make sure that the application is running. Don't forget to toggle the reset button if you see no messages.
 
 ## STEP 5: a bootloader with secure boot enabled that enforces signed firmware images
 
@@ -218,21 +218,21 @@ In this step, we will generate a bootloader based on *Bootloader - NCP BGAPI UAR
    
 ![21](https://github.com/jun-source/cookies-bootloader/assets/122213795/75251423-b4e1-4e4f-bbb4-fa24db1e9262)
 
-4. Create a new bootloader based on the *Bootloader - NCP BGAOI UART DFU* example and name it *bootloader-uart-bgapi-secureboot*. Just like on STEP 3, you need to set *bootloader-uart-bgapi-secureboot/config/btl_uart_driver_cfg.h* to match with the target device USART0 pinout.
+3. Create a new bootloader based on the *Bootloader - NCP BGAOI UART DFU* example and name it *bootloader-uart-bgapi-secureboot*. Just like on STEP 3, you need to set *bootloader-uart-bgapi-secureboot/config/btl_uart_driver_cfg.h* to match with the target device USART0 pinout.
 
-5. The features needed for secure boot are already included in the project. You only need to activate it by modifying *bootloader-uart-bgapi-secureboot/config/btl_core_cfg.h*. More specifically, you need to set this macro *#define BOOTLOADER_ENFORCE_SECURE_BOOT* to 1.
+4. The features needed for secure boot are already included in the project. You only need to activate it by modifying *bootloader-uart-bgapi-secureboot/config/btl_core_cfg.h*. More specifically, you need to set this macro *#define BOOTLOADER_ENFORCE_SECURE_BOOT* to 1.
 
 ![22](https://github.com/jun-source/cookies-bootloader/assets/122213795/def1d9d8-b5f3-4d87-932d-abb531525207)
 
-7. Compile the project.
+5. Compile the project.
 
-8. Open a new terminal and go to *<root-project>/btl-fw-upgrade-ws/bootloader*. Don't forget to source *set-env.sh* if you hadn't done before.
+6. Open a new terminal and go to *<root-project>/btl-fw-upgrade-ws/bootloader*. Don't forget to source *set-env.sh* if you hadn't done before.
 
-9. Copy *<root-project>/simplicity-studio-ws/bootloader-uart-bgapi-secureboot/artifact* folder and rename it as *<root-project>/btl-fw-upgrade-ws/bootloader/images/bootloader-uart-bgapi-secureboot*.
+7. Copy *<root-project>/simplicity-studio-ws/bootloader-uart-bgapi-secureboot/artifact* folder and rename it as *<root-project>/btl-fw-upgrade-ws/bootloader/images/bootloader-uart-bgapi-secureboot*.
 
-10. Load the bootloader to your target device by executing `bash load-bootloader.sh -p images/bootloader-uart-bgapi-secureboot/bootloader-uart-bgapi-secureboot-crc.s37`. Remember that in previous STEPS, we have already loaded the first stage bootloader. Therefore, we only need to update the main bootloader.
+8. Load the bootloader to your target device by executing `bash load-bootloader.sh -p images/bootloader-uart-bgapi-secureboot/bootloader-uart-bgapi-secureboot-crc.s37`. Remember that in previous STEPS, we have already loaded the first stage bootloader. Therefore, we only need to update the main bootloader.
 
-11. The next step will be generating the ECDSA key pair. Go to *<root-project>/btl-fw-upgrade-ws/keys* folder and execute `bash key-gen.sh -a -e`. "-a" option will create an AES-CTR-128 key and "-e" option generates ECDSA-P256. Even though, only signed firmware will be tested on STEP 5. We will generate beforehand the AES key for STEP 6.
+9. The next step will be generating the ECDSA key pair. Go to *<root-project>/btl-fw-upgrade-ws/keys* folder and execute `bash key-gen.sh -a -e`. "-a" option will create an AES-CTR-128 key and "-e" option generates ECDSA-P256. Even though, only signed firmware will be tested on STEP 5. We will generate beforehand the AES key for STEP 6.
 
 ![23](https://github.com/jun-source/cookies-bootloader/assets/122213795/c02b74fc-794d-4750-be45-8fa5d28788d5)
 
@@ -246,7 +246,7 @@ In this step, we will generate a bootloader based on *Bootloader - NCP BGAPI UAR
 
    - *app-encrypt-key* contains AES-128 key for encryption. The file has token format, making it suitable to write to the EFR32 device using *commander flash --tokenfile*.
 
-11. We load ECDSA public key and the AES key by executing `bash key-gen.sh -f`.
+10. We load ECDSA public key and the AES key by executing `bash key-gen.sh -f`.
 
 ![25](https://github.com/jun-source/cookies-bootloader/assets/122213795/416fc572-9f6e-4ae7-a96c-57375879814c)
 
@@ -254,7 +254,7 @@ In this step, we will generate a bootloader based on *Bootloader - NCP BGAPI UAR
 
 ![26](https://github.com/jun-source/cookies-bootloader/assets/122213795/bc898b93-addc-46a5-a640-29207ff6f28a)
 
-13. The last step would be the generation of a signed firmware image on GBL format. The same *create_bl_files.sh* script used at STEP 4 is valid. As mentioned before, in order to the create the encrypted and signed firmware images, the correspondent keys must be located in the same folder as *create_bl_files.sh* by the name of *app-encrypt-key.txt* for the AES key and by the name of *app-sign-key.pem* for the private key of ECDSA. Therefore, you need to copy and rename the keys generated previously:
+11. The last step would be the generation of a signed firmware image on GBL format. The same *create_bl_files.sh* script used at STEP 4 is valid. As mentioned before, in order to the create the encrypted and signed firmware images, the correspondent keys must be located in the same folder as *create_bl_files.sh* by the name of *app-encrypt-key.txt* for the AES key and by the name of *app-sign-key.pem* for the private key of ECDSA. Therefore, you need to copy and rename the keys generated previously:
 
     *cp <root-project>/btl-fw-upgrade-ws/keys/app-encrypt-key <root-project>/btl-fw-upgrade-ws/firmware/images/app-encrypt-key.txt*
 
@@ -273,21 +273,21 @@ In this step, we will generate a bootloader based on *Bootloader - NCP BGAPI UAR
     - full-signed.gbl:: ECDSA signed GBL file.
     - full-signed-encrypted.gbl: AES encrypted and ECDSA signed GBL file.
 
-15. Only remains upgrading the firmware through the *bt_host_uart_dfu* host program used in STEP 4. To verify that secure boot is enforcing firmware images to be signed by ECDSA, we will do a little test. First, a non-signed image will be flashed and we will check that the application has been blocked by the bootloader from booting. Then, we will do the same process, but with a signed image and we will check that the application will be running.
+12. Only remains upgrading the firmware through the *bt_host_uart_dfu* host program used in STEP 4. To verify that secure boot is enforcing firmware images to be signed by ECDSA, we will do a little test. First, a non-signed image will be flashed and we will check that the application has been blocked by the bootloader from booting. Then, we will do the same process, but with a signed image and we will check that the application will be running.
 
-16. Disconnect the target device from the debugger a connect it to the host using the USB-C port.
+13. Disconnect the target device from the debugger a connect it to the host using the USB-C port.
 
-17. Go to  *<root-project>/btl-fw-upgrade-ws/firmware*.
+14. Go to  *<root-project>/btl-fw-upgrade-ws/firmware*.
 
-18. First, we will proceed with the non-signed image by executing `bash fw-upgrade.sh -p images/output_gbl/full.gbl.` We see that even we know that the application is "faulty" is still being downloaded. This shouldn't be allowed in a real case scenario. That's why on STEP 6, we will enforce firmware upgrades to be secure too.
+15. First, we will proceed with the non-signed image by executing `bash fw-upgrade.sh -p images/output_gbl/full.gbl.` We see that even we know that the application is "faulty" is still being downloaded. This shouldn't be allowed in a real case scenario. That's why on STEP 6, we will enforce firmware upgrades to be secure too.
 
 ![28](https://github.com/jun-source/cookies-bootloader/assets/122213795/f4c98c64-0e2e-471f-bb04-09b19f24f0c5)
 
-20. Establish a communication channel using CoolTerm. You shouldn't see any messages even if you toggle the reset button multiple times. This means that the bootloader has blocked the application from loading.
+16. Establish a communication channel using CoolTerm. You shouldn't see any messages even if you toggle the reset button multiple times. This means that the bootloader has blocked the application from loading.
 
 ![29](https://github.com/jun-source/cookies-bootloader/assets/122213795/6a3cb8fc-56be-4761-acec-234e94ca2f89)
 
-22. This time, we will try with the signed image. Just in case make sure again to erase the contents of the main flash. Then download the signed firmware by executing `bash fw-upgrade.sh -p images/output_gbl/full-signed.gbl`. Open CoolTerm and this time should you get some messages from the application running on the target device. This means that the bootloader has authenticated the application and it has let it run.
+17. This time, we will try with the signed image. Just in case make sure again to erase the contents of the main flash. Then download the signed firmware by executing `bash fw-upgrade.sh -p images/output_gbl/full-signed.gbl`. Open CoolTerm and this time should you get some messages from the application running on the target device. This means that the bootloader has authenticated the application and it has let it run.
 
 ![30](https://github.com/jun-source/cookies-bootloader/assets/122213795/d474bd4d-c97e-4908-9a96-9f38fd9d19b5)
 
@@ -302,19 +302,19 @@ On STEP 6, we noticed that even secure boot enforces applications to be authenti
 
 ![31](https://github.com/jun-source/cookies-bootloader/assets/122213795/5600e4fb-4f07-43cc-89fa-b33d6809de42)
 
-6. Build the project.
-7. Go to *<root-project>/btl-fw-upgrade-ws/bootloader*. Don't forget to source *set-env.sh* if you hadn't done before.
-8. Copy *<root-project>/simplicity-studio-ws/bootloader-uart-bgapi-secureboot-fw-signed-encrypt/artifact* folder and rename it as *<root-project>/btl-fw-upgrade-ws/bootloader/images/bootloader-uart-bgapi-secureboot-fw-signed-encrypt*.
-9. Load the bootloader to your target device by executing `bash load-bootloader.sh -p images/bootloader-uart-bgapi-secureboot-fw-signed-encrypt/bootloader-uart-bgapi-secureboot-fw-signed-encrypt-crc.s37`.
-10. Remember that we have already generated the ECDSA keypair and the AES key, and flashed them to the target device on STEP 5. For this showcase, we will not do it again. Nevertheless, on a real case scenario you should be aware of the exposure of your keys and ought to have a policy for managing them carefully.
-11. The last step will be upgrading the firmware. Again, we will upload a faulty firmware to check that the bootloader enforces signed and encrypted firmware upgrades. Then, we will download the correct one. Remember that we have already generated all the firmware images on STEP 5.
-12. Disconnect the target device from the debugger and connect it through the USB-C port.
-13. We will start with the faulty one. For example, we will try to upload a image that is only signed but not encrypted. Execute `bash fw-upgrade.sh -p images/output_gbl/full-signed.gbl`. You will see that the process fails and the malicious firmware has not been flashed to the device.
+5. Build the project.
+6. Go to *<root-project>/btl-fw-upgrade-ws/bootloader*. Don't forget to source *set-env.sh* if you hadn't done before.
+7. Copy *<root-project>/simplicity-studio-ws/bootloader-uart-bgapi-secureboot-fw-signed-encrypt/artifact* folder and rename it as *<root-project>/btl-fw-upgrade-ws/bootloader/images/bootloader-uart-bgapi-secureboot-fw-signed-encrypt*.
+8. Load the bootloader to your target device by executing `bash load-bootloader.sh -p images/bootloader-uart-bgapi-secureboot-fw-signed-encrypt/bootloader-uart-bgapi-secureboot-fw-signed-encrypt-crc.s37`.
+9. Remember that we have already generated the ECDSA keypair and the AES key, and flashed them to the target device on STEP 5. For this showcase, we will not do it again. Nevertheless, on a real case scenario you should be aware of the exposure of your keys and ought to have a policy for managing them carefully.
+10. The last step will be upgrading the firmware. Again, we will upload a faulty firmware to check that the bootloader enforces signed and encrypted firmware upgrades. Then, we will download the correct one. Remember that we have already generated all the firmware images on STEP 5.
+11. Disconnect the target device from the debugger and connect it through the USB-C port.
+12. We will start with the faulty one. For example, we will try to upload a image that is only signed but not encrypted. Execute `bash fw-upgrade.sh -p images/output_gbl/full-signed.gbl`. You will see that the process fails and the malicious firmware has not been flashed to the device.
 
 ![32](https://github.com/jun-source/cookies-bootloader/assets/122213795/33e5447a-1952-43a9-bfa1-06660c4aae86)
 
-15. Finally, we will be load the signed and encrypted firmware image which is the one that current bootloader expects. Execute `bash fw-upgrade.sh -p images/output_gbl/full-signed-encrypted.gbl`. This time the upgrade process doesn't fail. Notice that the size of the different GBL files varies depending on the number of features that has been added (ECDSA sign, AES encryption, CRC, etc).
+13. Finally, we will be load the signed and encrypted firmware image which is the one that current bootloader expects. Execute `bash fw-upgrade.sh -p images/output_gbl/full-signed-encrypted.gbl`. This time the upgrade process doesn't fail. Notice that the size of the different GBL files varies depending on the number of features that has been added (ECDSA sign, AES encryption, CRC, etc).
 
 ![33](https://github.com/jun-source/cookies-bootloader/assets/122213795/0abf02dd-a8a2-4031-9114-e4e333037311)
 
-17. You can double-check by opening CoolTerm and see that the application is running.
+14. You can double-check by opening CoolTerm and see that the application is running.
