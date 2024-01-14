@@ -15,7 +15,7 @@ The main objective of this project is to enable for the first time secure boot a
 2. Launch Simplicity Studio GUI by executing *SimplicityStudio_v5/studiowayland.sh*.
 3. Connect your host device to the target device through a STK debugger. Don't forget to switch your debugger board to **AEM**.
 
-![Cookies-stk](https://github.com/jun-source/cookies-bootloader/assets/122213795/417a46f1-a573-42a6-a4a2-077e3318579e)
+![Cookies-stk](https://github.com/jun-source/cookies-bootloader/assets/122213795/0f41a3a3-70ff-43e7-8178-cdbf51e99626)
 
 4. Continue with the installation. A wizard will pop up listing the recommended tools and SDKs for the detected devices. If the target device is not detected automatically click on *Simplicty Studio -> Launcher -> Overview -> Board -> Detect Target Part* . If the GUI is not able to detect the device, you may install manually GSDK v4 (it contains the examples used in this project).
 5. We recommend you to download CoolTerm for serial communication with the target device.
