@@ -33,7 +33,7 @@ do
 		 echo "Application options:"
 		 echo "  -a				Generating AES-CTR-128 key"
 		 echo "  -e				Generating ECDSA-P256-SHA256 key pair"
-		 echo "  -f				Flashing ECDSA key pair and AES key to $DEVICE"
+		 echo "  -f				Flashing ECDSA keypair and AES key to $DEVICE"
 		 echo
 		 ;;
 	  *)
