@@ -43,35 +43,29 @@ It is recommended to run this example first. It will solve most of the USART com
 
 6. You need to match USART pin definition in the project with the pinout of the target device. The configuration is done at *iostream_usart_baremetal/config/sl_iostream_usart_vcom_config.h*. In the case of Cookies, USART0 will be used for the communication between the host and the target device. RTS and CTS are disabled.  Add the following lines to the file:
 
-   `//Cookies pinout`
+   ```
+   //Cookies pinout
+    #define SL_IOSTREAM_USART_VCOM_PERIPHERAL      USART0
+    #define SL_IOSTREAM_USART_VCOM_PERIPHERAL_NO   0
    
-    `#define SL_IOSTREAM_USART_VCOM_PERIPHERAL      USART0`
+    #define SL_IOSTREAM_USART_VCOM_TX_PORT         gpioPortA
+    #define SL_IOSTREAM_USART_VCOM_TX_PIN          0
+    #define SL_IOSTREAM_USART_VCOM_TX_LOC          0
    
-    `#define SL_IOSTREAM_USART_VCOM_PERIPHERAL_NO   0`
-
-    `#define SL_IOSTREAM_USART_VCOM_TX_PORT         gpioPortA`
+    #define SL_IOSTREAM_USART_VCOM_RX_PORT         gpioPortA
+    #define SL_IOSTREAM_USART_VCOM_RX_PIN          1
+    #define SL_IOSTREAM_USART_VCOM_RX_LOC          0
    
-    `#define SL_IOSTREAM_USART_VCOM_TX_PIN          0`
+    #define SL_IOSTREAM_USART_VCOM_CTS_PORT        gpioPortA
+    #define SL_IOSTREAM_USART_VCOM_CTS_PIN         2
+    #define SL_IOSTREAM_USART_VCOM_CTS_LOC         0 // PA2 do not CTS
    
-    `#define SL_IOSTREAM_USART_VCOM_TX_LOC          0`
-
-    `#define SL_IOSTREAM_USART_VCOM_RX_PORT         gpioPortA`
+    #define SL_IOSTREAM_USART_VCOM_RTS_PORT        gpioPortA
+    #define SL_IOSTREAM_USART_VCOM_RTS_PIN         3
+    #define SL_IOSTREAM_USART_VCOM_RTS_LOC         0 // PA3 do not RTS
+   ```
    
-    `#define SL_IOSTREAM_USART_VCOM_RX_PIN          1`
    
-    `#define SL_IOSTREAM_USART_VCOM_RX_LOC          0`
-
-    `#define SL_IOSTREAM_USART_VCOM_CTS_PORT        gpioPortA`
-   
-    `#define SL_IOSTREAM_USART_VCOM_CTS_PIN         2`
-   
-    `#define SL_IOSTREAM_USART_VCOM_CTS_LOC         0 // PA2 do not CTS`
-
-    `#define SL_IOSTREAM_USART_VCOM_RTS_PORT        gpioPortA`
-   
-    `#define SL_IOSTREAM_USART_VCOM_RTS_PIN         3`
-   
-    `#define SL_IOSTREAM_USART_VCOM_RTS_LOC         0 // PA3 do not RTS`
 
 ![4](https://github.com/jun-source/cookies-bootloader/assets/122213795/0fbbf616-c5ec-4b39-8671-b050b48f74fb)
 
@@ -119,31 +113,27 @@ The next step will be loading one of the bootloader examples provided by the man
 
  4. Match USART0 pinout definition in the source code with target device's pinout by modifying *bootloader-uart-bgapi/config/btl_uart_driver_cfg.h* with the following lines.
 
-    `//Cookies pinout`
+    ```
+    //Cookies pinout
+     #define SL_SERIAL_UART_PERIPHERAL      USART0
+     #define SL_SERIAL_UART_PERIPHERAL_NO   0
+     
+     #define SL_SERIAL_UART_TX_PORT         gpioPortA
+     #define SL_SERIAL_UART_TX_PIN          0
+     #define SL_SERIAL_UART_TX_LOC          0
+     
+     #define SL_SERIAL_UART_RX_PORT         gpioPortA
+     #define SL_SERIAL_UART_RX_PIN          1
+     #define SL_SERIAL_UART_RX_LOC          0
+     
+     #define SL_SERIAL_UART_CTS_PORT        gpioPortA
+     #define SL_SERIAL_UART_CTS_PIN         2
+     
+     #define SL_SERIAL_UART_RTS_PORT        gpioPortA
+     #define SL_SERIAL_UART_RTS_PIN         3
+    ```
     
-     `#define SL_SERIAL_UART_PERIPHERAL      USART0`
     
-     `#define SL_SERIAL_UART_PERIPHERAL_NO   0`
-
-     `#define SL_SERIAL_UART_TX_PORT         gpioPortA`
-    
-     `#define SL_SERIAL_UART_TX_PIN          0`
-    
-     `#define SL_SERIAL_UART_TX_LOC          0`
-
-     `#define SL_SERIAL_UART_RX_PORT         gpioPortA`
-    
-     `#define SL_SERIAL_UART_RX_PIN          1`
-    
-     `#define SL_SERIAL_UART_RX_LOC          0`
-
-     `#define SL_SERIAL_UART_CTS_PORT        gpioPortA`
-    
-     `#define SL_SERIAL_UART_CTS_PIN         2`
-
-     `#define SL_SERIAL_UART_RTS_PORT        gpioPortA`
-    
-     `#define SL_SERIAL_UART_RTS_PIN         3`
 
 ![10](https://github.com/jun-source/cookies-bootloader/assets/122213795/34fa9b1d-c6b5-45c6-a509-c79aee17b5ae)
 
@@ -178,12 +168,12 @@ The next step will be loading one of the bootloader examples provided by the man
       `/home/$USER/projects/cookies-boot-dfu/simplicity-studio-ws/iostream_usart_baremetal/autogen/sl_application_type.h:34:10: fatal error: api/application_properties.h: No such file or directory`
 
       It seems like it is a bug known by the manufacturer, but it has not been fixed (https://community.silabs.com/s/question/0D58Y00008ZZjOASA1/app-properties-not-working-in-gsdk-402?language=en_US). As it is said on the forum, you need to create manually *iostream_usart_baremetal/gecko_sdk_4.3.2/platform/bootloader/api/application_properties.h*. Then copy the contents of */home/$USER/SimplicityStudio/SDKs/gecko_sdk/platform/bootloader/api/application_properties.h* from the SDK installation folder into the file. It seems like the IDE does not properly retrieve the needed files from the Simplicity Studio SDK installation folder.
-      
+
       If you compile the project, you will get again the same error logs. You need to fix the relative paths of the includes. For example, one of files that falied is *iostream_usart_baremetal/autogen/sl_application_type.h*. Open that file and change *#include "api/application_properties.h"* to *#include "../gecko_sdk_4.3.2/platform/bootloader/api/application_properties.h"*.
 
 ![17](https://github.com/jun-source/cookies-bootloader/assets/122213795/53fd1e1f-fe36-43cb-a689-2e2c0c17a0aa)
 
-      In other words, you need to fix the relative paths of the includes. There will probably be other files with the same issue, this time even from the Simplicity Studio SDK installation folder, you must fix them too. Once you have done it, there shall not be any more compiling issues.
+  In other words, you need to fix the relative paths of the includes. There will probably be other files with the same issue, this time even from the Simplicity Studio SDK installation folder, you must fix them too. Once you have done it, there shall not be any more compiling issues.
 
    3. Open a terminal. Don't forget to *source <root-project>/btl-fw-upgrade-ws/set-env.sh*. Go to *<root-project>/btl-fw-upgrade-ws/firmware/images* . Then bring the firmware binary from *<root-project>/simplicity-studio-ws/iostream_usart_baremetal/GNU\ ARM\ v10.3.1\ -\ Default/iostream_usart_baremetal.out* .
 
@@ -263,6 +253,7 @@ In this step, we will generate a bootloader based on *Bootloader - NCP BGAPI UAR
 
     Execute *create_bl_files.sh* and take a look to *output_gbl/* folder.
     
+
 ![27](https://github.com/jun-source/cookies-bootloader/assets/122213795/7fb8bb9b-ca5e-4784-a2e3-b31044af1b57)
 
     For UART DFU:
