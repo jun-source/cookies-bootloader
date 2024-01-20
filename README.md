@@ -163,13 +163,13 @@ The next step will be loading one of the bootloader examples provided by the man
 
 ![16](https://github.com/jun-source/cookies-bootloader/assets/122213795/6ba1dc2d-8b70-4c7d-9b99-aa70612f111c)
 
-      If you build the project with the newly added component, you will probably get the following warning:
+  If you build the project with the newly added component, you will probably get the following warning:
 
-      `/home/$USER/projects/cookies-boot-dfu/simplicity-studio-ws/iostream_usart_baremetal/autogen/sl_application_type.h:34:10: fatal error: api/application_properties.h: No such file or directory`
+  `/home/$USER/projects/cookies-boot-dfu/simplicity-studio-ws/iostream_usart_baremetal/autogen/sl_application_type.h:34:10: fatal error: api/application_properties.h: No such file or directory`
 
-      It seems like it is a bug known by the manufacturer, but it has not been fixed (https://community.silabs.com/s/question/0D58Y00008ZZjOASA1/app-properties-not-working-in-gsdk-402?language=en_US). As it is said on the forum, you need to create manually *iostream_usart_baremetal/gecko_sdk_4.3.2/platform/bootloader/api/application_properties.h*. Then copy the contents of */home/$USER/SimplicityStudio/SDKs/gecko_sdk/platform/bootloader/api/application_properties.h* from the SDK installation folder into the file. It seems like the IDE does not properly retrieve the needed files from the Simplicity Studio SDK installation folder.
+  It seems like it is a bug known by the manufacturer, but it has not been fixed (https://community.silabs.com/s/question/0D58Y00008ZZjOASA1/app-properties-not-working-in-gsdk-402?language=en_US). As it is said on the forum, you need to create manually *iostream_usart_baremetal/gecko_sdk_4.3.2/platform/bootloader/api/application_properties.h*. Then copy the contents of */home/$USER/SimplicityStudio/SDKs/gecko_sdk/platform/bootloader/api/application_properties.h* from the SDK installation folder into the file. It seems like the IDE does not properly retrieve the needed files from the Simplicity Studio SDK installation folder.
 
-      If you compile the project, you will get again the same error logs. You need to fix the relative paths of the includes. For example, one of files that falied is *iostream_usart_baremetal/autogen/sl_application_type.h*. Open that file and change *#include "api/application_properties.h"* to *#include "../gecko_sdk_4.3.2/platform/bootloader/api/application_properties.h"*.
+  If you compile the project, you will get again the same error logs. You need to fix the relative paths of the includes. For example, one of files that falied is *iostream_usart_baremetal/autogen/sl_application_type.h*. Open that file and change *#include "api/application_properties.h"* to *#include "../gecko_sdk_4.3.2/platform/bootloader/api/application_properties.h"*.
 
 ![17](https://github.com/jun-source/cookies-bootloader/assets/122213795/53fd1e1f-fe36-43cb-a689-2e2c0c17a0aa)
 
@@ -241,7 +241,7 @@ In this step, we will generate a bootloader based on *Bootloader - NCP BGAPI UAR
 
 ![25](https://github.com/jun-source/cookies-bootloader/assets/122213795/416fc572-9f6e-4ae7-a96c-57375879814c)
 
-    By checking the modified memory range 0x0FE04000 - 0x0FE047FF (2 KB), we see that the keys are loaded to a reserved region on the flash called *Lockbits*. The tools give the users the ability of write-protecting some regions of the flash that contains data that we might don't want them to be overwritten like cryptographic keys or the bootloader. This feature need to be activated manually by the user just like secure boot. In this showcase, write-protection will be disabled, but you may want to activate it in your application.
+By checking the modified memory range 0x0FE04000 - 0x0FE047FF (2 KB), we see that the keys are loaded to a reserved region on the flash called *Lockbits*. The tools give the users the ability of write-protecting some regions of the flash that contains data that we might don't want them to be overwritten like cryptographic keys or the bootloader. This feature need to be activated manually by the user just like secure boot. In this showcase, write-protection will be disabled, but you may want to activate it in your application.
 
 ![26](https://github.com/jun-source/cookies-bootloader/assets/122213795/bc898b93-addc-46a5-a640-29207ff6f28a)
 
@@ -256,14 +256,14 @@ In this step, we will generate a bootloader based on *Bootloader - NCP BGAPI UAR
 
 ![27](https://github.com/jun-source/cookies-bootloader/assets/122213795/7fb8bb9b-ca5e-4784-a2e3-b31044af1b57)
 
-    For UART DFU:
+For UART DFU:
 
-    - full.gbl: regular GBL file containing the firmware image.
+- full.gbl: regular GBL file containing the firmware image.
 
-    - full-crc.gbl: same as full.gbl but with checksum for integrity validation.
-    - full-encrypted.gbl: AES encrypted GBL file.
-    - full-signed.gbl:: ECDSA signed GBL file.
-    - full-signed-encrypted.gbl: AES encrypted and ECDSA signed GBL file.
+- full-crc.gbl: same as full.gbl but with checksum for integrity validation.
+- full-encrypted.gbl: AES encrypted GBL file.
+- full-signed.gbl:: ECDSA signed GBL file.
+- full-signed-encrypted.gbl: AES encrypted and ECDSA signed GBL file.
 
 12. Only remains upgrading the firmware through the *bt_host_uart_dfu* host program used in STEP 4. To verify that secure boot is enforcing firmware images to be signed by ECDSA, we will do a little test. First, a non-signed image will be flashed and we will check that the application has been blocked by the bootloader from booting. Then, we will do the same process, but with a signed image and we will check that the application will be running.
 
