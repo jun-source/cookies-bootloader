@@ -5,6 +5,7 @@ The main objective of this project is to enable for the first time secure boot a
 **Notes:**
 
 - The following steps were **only** tested on Cookies' boards. In this document, they will be referred as the **target devices**. On the other hand, we will use the term **host device** to refer the machine used for development.
+- If you use the **Device Firmware Upgrade (DFU)** method described in this project, you need to **erase** the previous firmware image stored in the internal flash memory of the SoC. Otherwise, the upgrade will fail.
 - All the modified projects are provided at *<root-project>/simplicity-studio-ws/examples*. In this document, we will explain the modifications made of the base examples provided by the manufacturer. But if you want to skip some of the steps, you can create  your project by importing those examples into your workspace through the GUI at *File/Import*.
   
   ![3](https://github.com/jun-source/cookies-bootloader/assets/122213795/8a28a916-8d35-4494-adbd-9760ae37f4bf)
@@ -199,7 +200,7 @@ The next step will be loading one of the bootloader examples provided by the man
    8. Execute `bash fw-upgrade.sh -p images/output_gbl/full.gbl` to initialize the firmware upgrade.
 
    9. Click on the reset button of the target device to go into bootloader mode.
-       
+
 ![19](https://github.com/jun-source/cookies-bootloader/assets/122213795/526f849d-41fc-4b05-bffe-52f477d86952)
 
    10. For double-check, open CoolTerm and make sure that the application is running. Don't forget to toggle the reset button if you see no messages.
@@ -215,7 +216,7 @@ In this step, we will generate a bootloader based on *Bootloader - NCP BGAPI UAR
 ![20](https://github.com/jun-source/cookies-bootloader/assets/122213795/08a43a4a-ee12-4897-9a11-27d5b4895f79)
 
    Select the device on *Select Kit* option. Then go to *Flash* section and click on *Erase chip*.
-   
+
 ![21](https://github.com/jun-source/cookies-bootloader/assets/122213795/75251423-b4e1-4e4f-bbb4-fa24db1e9262)
 
 3. Create a new bootloader based on the *Bootloader - NCP BGAOI UART DFU* example and name it *bootloader-uart-bgapi-secureboot*. Just like on STEP 3, you need to set *bootloader-uart-bgapi-secureboot/config/btl_uart_driver_cfg.h* to match with the target device USART0 pinout.
