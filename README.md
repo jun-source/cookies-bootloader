@@ -21,7 +21,7 @@ The main objective of this project is to enable for the first time secure boot a
 4. Continue with the installation. A wizard will pop up listing the recommended tools and SDKs for the detected devices. If the target device is not detected automatically click on *Simplicty Studio -> Launcher -> Overview -> Board -> Detect Target Part* . If the GUI is not able to detect the device, you may install manually GSDK v4 (it contains the examples used in this project).
 5. We recommend you to download CoolTerm for serial communication with the target device.
 6. Close Simplicity Studio.
-7. Clone this repository: *git clone git@github.com:jun-source/cookies-bootloader.git*
+7. Clone this repository in your machine: *git clone git@github.com:jun-source/cookies-bootloader.git*
 
 ## STEP 2: RUN IOSTREAM_USART_BAREMETAL EXAMPLE ON YOUR TARGET DEVICE
 
