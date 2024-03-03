@@ -6,7 +6,7 @@ The main objective of this project is to enable for the first time secure boot a
 
 - The following steps were **only** tested on Cookies' boards. In this document, they will be referred as the **target devices**. On the other hand, we will use the term **host device** to refer the machine used for development.
 - If you use the **Device Firmware Upgrade (DFU)** method described in this project, you need to **erase** the previous firmware image stored in the internal flash memory of the SoC. Otherwise, the upgrade will fail.
-- All the modified projects are provided at *<root-project>/simplicity-studio-ws/examples*. In this document, we will explain the modifications made of the base examples provided by the manufacturer. But if you want to skip some of the steps, you can create  your project by importing those examples into your workspace through the GUI at *File/Import*.
+- All the modified projects are provided at *<root-project>/simplicity-studio-ws/examples*. In this document, we will explain the modifications made to the base examples provided by the manufacturer. But if you want to skip some of the steps, you can create  your project by importing those examples into your workspace through the GUI at *File/Import*.
   
   ![3](https://github.com/jun-source/cookies-bootloader/assets/122213795/8a28a916-8d35-4494-adbd-9760ae37f4bf)
 
