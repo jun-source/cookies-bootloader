@@ -12,7 +12,7 @@ The main objective of this project is to enable for the first time secure boot a
 
 ## STEP 1: DOWNLOAD SIMPLICITY STUDIO AND SET UP YOUR HOST DEVICE
 
-1. Follow the instructions given by *https://docs.silabs.com/simplicity-studio-5-users-guide/latest/ss-5-users-guide-getting-started/install-ss-5-and-software*.
+1. To install Simplicity Studio follow the instructions given by *https://docs.silabs.com/simplicity-studio-5-users-guide/latest/ss-5-users-guide-getting-started/install-ss-5-and-software*.
 2. Launch Simplicity Studio GUI by executing *SimplicityStudio_v5/studiowayland.sh*.
 3. Connect your host device to the target device through a STK debugger. Don't forget to switch your debugger board to **AEM**.
 
