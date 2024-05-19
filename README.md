@@ -254,9 +254,9 @@ By checking the modified memory range 0x0FE04000 - 0x0FE047FF (2 KB), we see tha
 
 11. The last step would be the generation of a signed firmware image on GBL format. The same *create_bl_files.sh* script used at STEP 4 is valid. As mentioned before, in order to the create the encrypted and signed firmware images, the correspondent keys must be located in the same folder as *create_bl_files.sh* by the name of *app-encrypt-key.txt* for the AES key and by the name of *app-sign-key.pem* for the private key of ECDSA. Therefore, you need to copy and rename the keys generated previously:
 
-    *cp <root-project>/btl-fw-upgrade-ws/keys/app-encrypt-key <root-project>/btl-fw-upgrade-ws/firmware/images/app-encrypt-key.txt*
+    *cp root-project/btl-fw-upgrade-ws/keys/app-encrypt-key root-project/btl-fw-upgrade-ws/firmware/images/app-encrypt-key.txt*
 
-    *cp  <root-project>/btl-fw-upgrade-ws/keys/app-sign-key <root-project>/btl-fw-upgrade-ws/firmware/images/app-sign-key.pem*
+    *cp  root-project/btl-fw-upgrade-ws/keys/app-sign-key root-project/btl-fw-upgrade-ws/firmware/images/app-sign-key.pem*
 
     Execute *create_bl_files.sh* and take a look to *output_gbl/* folder.
     
