@@ -145,7 +145,7 @@ The next step will be loading one of the bootloader examples provided by the man
 
  7. Go to *<root-project>/btl-fw-upgrade-ws/bootloader* and create a folder called *images*. Bring the bootloader binaries you generated before by `cp -r ../../simplicity-studio-ws/bootloader-uart-bgapi/artifact/ images/bootloader-uart-bgapi`.
 
- 8. Among the generated bootloader binaries you must load *images/bootloader-uart-bgapi-combined.s37* (main booloader + first stage) by executing `bash load-bootloader.sh -e -f images/bootloader-uart-bgapi/bootloader-uart-bgapi-combined.s37`.
+ 8. Among the generated bootloader binaries you must load *images/bootloader-uart-bgapi-combined.s37* (main booloader + first stage) by executing `bash load-bootloader.sh -e -p images/bootloader-uart-bgapi/bootloader-uart-bgapi-combined.s37`.
 
 ![12](https://github.com/jun-source/cookies-bootloader/assets/122213795/866a3172-0fc3-45af-8f4c-67acab0e8de2)
 
@@ -167,13 +167,20 @@ The next step will be loading one of the bootloader examples provided by the man
 
   `/home/$USER/projects/cookies-boot-dfu/simplicity-studio-ws/iostream_usart_baremetal/autogen/sl_application_type.h:34:10: fatal error: api/application_properties.h: No such file or directory`
 
-  It seems like it is a bug known by the manufacturer, but it has not been fixed (https://community.silabs.com/s/question/0D58Y00008ZZjOASA1/app-properties-not-working-in-gsdk-402?language=en_US). As it is said on the forum, you need to create manually *iostream_usart_baremetal/gecko_sdk_4.3.2/platform/bootloader/api/application_properties.h*. Then copy the contents of */home/$USER/SimplicityStudio/SDKs/gecko_sdk/platform/bootloader/api/application_properties.h* from the SDK installation folder into the file. It seems like the IDE does not properly retrieve the needed files from the Simplicity Studio SDK installation folder.
+  It seems like it is a bug known by the manufacturer, but it has not been fixed (https://community.silabs.com/s/question/0D58Y00008ZZjOASA1/app-properties-not-working-in-gsdk-402?language=en_US). As it is said on the forum, you need to create manually *iostream_usart_baremetal/gecko_sdk_4.X.X/platform/bootloader/api/application_properties.h*. Then copy the contents of */home/$USER/SimplicityStudio/SDKs/gecko_sdk/platform/bootloader/api/application_properties.h* from the SDK installation folder into the file. It seems like the IDE does not properly retrieve the needed files from the Simplicity Studio SDK installation folder.
 
-  If you compile the project, you will get again the same error logs. You need to fix the relative paths of the includes. For example, one of files that falied is *iostream_usart_baremetal/autogen/sl_application_type.h*. Open that file and change *#include "api/application_properties.h"* to *#include "../gecko_sdk_4.3.2/platform/bootloader/api/application_properties.h"*.
+  If you compile the project, you will get again the same error logs. You need to fix the relative paths of the includes. For example, one of files that falied is *iostream_usart_baremetal/autogen/sl_application_type.h*. Open that file and change *#include "api/application_properties.h"* to *#include "../gecko_sdk_4.X.X/platform/bootloader/api/application_properties.h"*.
 
 ![17](https://github.com/jun-source/cookies-bootloader/assets/122213795/53fd1e1f-fe36-43cb-a689-2e2c0c17a0aa)
 
-  In other words, you need to fix the relative paths of the includes. There will probably be other files with the same issue, this time even from the Simplicity Studio SDK installation folder, you must fix them too. Once you have done it, there shall not be any more compiling issues.
+  In other words, you need to fix the relative paths of the includes. If you compile you will get another issue:
+
+`/home/jun/SimplicityStudio/SDKs/gecko_sdk/platform/Device/SiliconLabs/EFR32BG12P/Source/startup_efr32bg12p.c:44:10: fatal error: api/application_properties.h: No such file or directory
+   44 | #include "api/application_properties.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.`
+
+This time you need to fix a wrong #include in the SDK. Open */home/jun/SimplicityStudio/SDKs/gecko_sdk/platform/Device/SiliconLabs/EFR32BG12P/Source/startup_efr32bg12p.c* with your favourite text editor and change *#include "api/application_properties.h"* to *#include "../../../../bootloader/api/application_properties.h"*.
 
    3. Open a terminal. Don't forget to *source <root-project>/btl-fw-upgrade-ws/set-env.sh*. Go to *<root-project>/btl-fw-upgrade-ws/firmware/images* . Then bring the firmware binary from *<root-project>/simplicity-studio-ws/iostream_usart_baremetal/GNU\ ARM\ v10.3.1\ -\ Default/iostream_usart_baremetal.out* .
 
