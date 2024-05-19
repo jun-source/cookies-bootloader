@@ -143,7 +143,7 @@ The next step will be loading one of the bootloader examples provided by the man
 
  6. Open a new terminal and go to *<root-project>/btl-fw-upgrade-ws*. This directory has been created for easing bootloader and firmware upgrade operations. You must `source set-env.sh` . This script will setup some environmental variables that will be needed by some other scripts.
 
- 7. Go to *<root-project>/btl-fw-upgrade-ws/bootloader*. Bring the bootloader binaries you generated before by `cp -r ../../simplicity-studio-ws/bootloader-uart-bgapi/artifact/ images/bootloader-uart-bgapi`.
+ 7. Go to *<root-project>/btl-fw-upgrade-ws/bootloader* and create a folder called *images*. Bring the bootloader binaries you generated before by `cp -r ../../simplicity-studio-ws/bootloader-uart-bgapi/artifact/ images/bootloader-uart-bgapi`.
 
  8. Between all the bootloader binaries you must load *images/bootloader-uart-bgapi-combined.s37* (main booloader + first stage) by executing `bash load-bootloader.sh -e -f images/bootloader-uart-bgapi/bootloader-uart-bgapi-combined.s37`.
 
